@@ -9,4 +9,13 @@
               -> we html5
               -> CSS3
               -> JavaScript
+
+              HTML is a markup language that gives the side some structure.
+              we have void tags like <img>
+
+                      closing tag           closing tag
+                          |                    |
+              <p class="label">read me please</p>
+                     |                 |
+                   an attribute    enclosing text
    ```
