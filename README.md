@@ -18,6 +18,23 @@
               <p class="label">read me please</p>
                      |                 |
                    an attribute    enclosing text
+
+              React.js -JSX
+                       -Props/State
+                       -useState
+                       -useEffect
+                       -Componets/Lifecyle Methods
+                       -Condational Rendering
+                       -List & Keys
+                       -Basic Form Handling
+                       -React Project Structure
+                       -Routing Reacting Router
+                       -Programmatic Navigation
+                       -Set-up JSON Server
+                       -API Calls(Axios)
+                       -React CRUD Operations
+                       -React Search Filter
+                       -React Hooks
    ``` 
 ### we can look at JSX for react and the representation of how it looks.
    ```
