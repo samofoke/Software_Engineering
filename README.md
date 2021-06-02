@@ -18,4 +18,15 @@
               <p class="label">read me please</p>
                      |                 |
                    an attribute    enclosing text
+   ``` 
+### we can look at JSX for react and the representation of how it looks.
+   ```
+   const name = 'Josh Perez';
+   const element = <h1>Hello, {name}</h1>; // this is the JSX wrapper 
+   
+   ReactDOM.render(
+     element,
+     document.getElementById('root')
+     
+  );
    ```
