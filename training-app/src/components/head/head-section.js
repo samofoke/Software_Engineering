@@ -3,9 +3,10 @@ import React from "react";
 
 const Header = () => {
     return (
-       <div className="ui menu">
-           <div className="ui container"></div>
+       <div className="ui fixed menu">
+           <div className="ui container center">
            <h2>Contacts</h2>
+           </div>
        </div> 
     );
 }
