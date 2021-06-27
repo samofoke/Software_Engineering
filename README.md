@@ -47,3 +47,10 @@
      
   );
    ```
+### Specifying attributes with JSX
+  * this is an example ```const element = <img src={user.avatarUrl}></img>;```
+  * JSX prevents injection attacks to the source code. 
+
+    ```
+    we use props when we try to acess
+    ```
