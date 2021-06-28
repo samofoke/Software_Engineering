@@ -14,4 +14,19 @@
      ```
      <script src="file name"></script>
      when you want to use he HTML file with some javascript inside 
-     ``` 
+     ```
+#### We look at operators in Javascript.
+   * This are just the basic structures that allows us to use operators.
+     ```
+     points[1].x - points[2].y
+     c++
+     c--
+     ++c
+     --c
+     c *=
+     c /=
+     this includes + and - as well
+     we look at x === y -> equality
+     x !== y -> inequality
+     x < y -> less than
+     ```

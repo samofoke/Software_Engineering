@@ -25,5 +25,5 @@ let cd = [
     {s: 2, a: 2}
 ];
 
-console.log(cd[0]);
+console.log(cd[0].s + cd[1].a);
 
