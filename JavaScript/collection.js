@@ -27,3 +27,9 @@ let cd = [
 
 console.log(cd[0].s + cd[1].a);
 
+function myNum(x) {
+    return x * 2;
+}
+
+let s = 3;
+console.log(myNum(s));

@@ -29,4 +29,17 @@
      we look at x === y -> equality
      x !== y -> inequality
      x < y -> less than
+     () && () -> AND
+     () || () -> OR
+     !() -> NOT
      ```
+#### A function is a named and parameterized block of JavaScript code that
+#### you define once.
+     ```
+     function p(x) {
+         return x * 2;
+     }
+
+     let z = 3;
+     console.log(p(z));
+     ``` 
