@@ -1,6 +1,11 @@
 import React from "react";
 
 class AddContact extends React.Component {
+
+    state = {
+        name: "",
+        email: ""
+    };
     
     render() {
         return (
@@ -9,11 +14,16 @@ class AddContact extends React.Component {
                 <form className="ui form">
                     <div className="field">
                         <label>Name</label>
-                        <input type="text" name="name" placeholder="name"></input>
+                        <input 
+                            type="text"
+                            name="name" 
+                            placeholder="name"
+                        >
+                        </input>
                     </div>
                     <div className="field">
-                        <label>Name</label>
-                        <input type="text" name="name" placeholder="name"></input>
+                        <label>Email</label>
+                        <input type="text" name="email" placeholder="email"></input>
                     </div>
                     <button className="ui button red">Add</button>
                 </form>
