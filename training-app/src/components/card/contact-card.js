@@ -8,6 +8,7 @@ const ContactCard = (props) => {
 
     return(
         <div className="item">
+            <img className="ui avator images" src={user} alt="user" />
             <div className="content">
                 <div className="header">
                     { name }
