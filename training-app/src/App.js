@@ -12,11 +12,15 @@ function App() {
 
   const [contacts, setContacts] = useState([]);
 
+  const addContactHandler = (contact) => {
+
+    console.log(contact);
+  }
 
   return (
     <div className="ui container">
       <Header />
-      <AddContact />
+      <AddContact addContactHandler={addContactHandler} />
       <ContactedList contacts={contacts} />
     </div>
   );
