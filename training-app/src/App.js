@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
+import { uuid } from 'uuidv4';
 import './App.css';
 import Header from "./components/head/head-section";
 import AddContact from "./components/add/add-contact";
@@ -17,9 +18,17 @@ function App() {
   const addContactHandler = (contact) => {
 
     console.log(contact);
-    setContacts([...contacts, contact]);
+    setContacts([...contacts, {id: uuid(), ...contact}]);
     //ths allows us to add details on the form
     //to the contact list on the page.
+  }
+
+  const deleteContactHandler = (id) => {
+    const newUser = contacts.filter((contact) => {
+      return(contact.id !== id);
+    });
+
+    setContacts(newUser);
   }
 
   useEffect(() => {
@@ -39,7 +48,10 @@ function App() {
     <div className="ui container">
       <Header />
       <AddContact addContactHandler={addContactHandler} />
-      <ContactedList contacts={contacts} />
+      <ContactedList 
+        contacts={contacts}
+        getUserId={deleteContactHandler} 
+      />
     </div>
   );
 }
