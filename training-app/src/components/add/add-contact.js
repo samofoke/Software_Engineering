@@ -32,8 +32,7 @@ class AddContact extends React.Component {
                             placeholder="name"
                             value={this.state.name}
                             onChange={(event)=> this.setState({ name: event.target.value})}
-                        >
-                        </input>
+                        />
                     </div>
                     <div className="field">
                         <label>Email</label>
@@ -43,8 +42,7 @@ class AddContact extends React.Component {
                             placeholder="email"
                             value={this.state.email}
                             onChange={(event)=> this.setState({ email: event.target.value})}
-                        >
-                        </input>
+                        />
                     </div>
                     <button className="ui button red">Add</button>
                 </form>
