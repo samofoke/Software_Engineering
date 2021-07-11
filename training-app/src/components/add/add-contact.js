@@ -11,7 +11,7 @@ class AddContact extends React.Component {
         event.preventDefault();
 
         if (this.state.name === "" || this.state.email === "") {
-            alert("you need to fill all thefields.");
+            alert("you need to fill all the fields.");
             return;
         }
         this.props.addContactHandler(this.state);
