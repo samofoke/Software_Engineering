@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { uuid } from 'uuidv4';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import Header from "./components/head/head-section";
 import AddContact from "./components/add/add-contact";
@@ -46,12 +47,17 @@ function App() {
 
   return (
     <div className="ui container">
-      <Header />
-      <AddContact addContactHandler={addContactHandler} />
-      <ContactedList 
+      <Router>
+        <Header />
+        <Switch>
+          <Route path="/" exact component={ContactedList} />
+          <Route path="/add" component={AddContact} />
+        </Switch>
+        {/* <ContactedList 
         contacts={contacts}
         getUserId={deleteContactHandler} 
-      />
+      /> */}
+      </Router>
     </div>
   );
 }
