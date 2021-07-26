@@ -50,13 +50,26 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path="/" exact component={ContactedList} />
-          <Route path="/add" component={AddContact} />
+          <Route 
+            path="/" 
+            exact
+            render={(props) => (
+              <ContactedList
+                {...props}
+                contacts={contacts}
+                getUserId={deleteContactHandler}
+                />
+            )}
+          />
+          <Route 
+            path="/add"
+            render={(props) => (
+              <AddContact
+                {...props}
+                addContactHandler={addContactHandler} />
+            )}
+          />
         </Switch>
-        {/* <ContactedList 
-        contacts={contacts}
-        getUserId={deleteContactHandler} 
-      /> */}
       </Router>
     </div>
   );
