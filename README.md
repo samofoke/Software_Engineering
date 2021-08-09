@@ -54,3 +54,17 @@
     ```
     we use props when we try to acess
     ```
+  * We look at how we can add properties to our objects, basic stuff.
+    ```
+     var myObject = {
+            "Name: "sly",
+            "Email": "sly@gmail.com"
+         }
+
+     myObject.passward = "shwrw2435%#$";
+     This properties will be added to myObject
+    ``` 
+
+
+
+
