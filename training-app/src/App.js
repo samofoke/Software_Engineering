@@ -7,6 +7,7 @@ import './App.css';
 import Header from "./components/head/head-section";
 import AddContact from "./components/add/add-contact";
 import ContactedList from "./components/list/contact-list";
+import AddTable from './components/addTable/addTable';
 
 //in this case we give a props
 //name and pass pass the required props
@@ -49,6 +50,7 @@ function App() {
     <div className="ui container">
       <Router>
         <Header />
+        <AddTable/>
         <Switch>
           <Route 
             path="/" 
@@ -69,6 +71,14 @@ function App() {
                 addContactHandler={addContactHandler} />
             )}
           />
+          {/* <Route
+            path="table"
+            render={(props) => (
+              <AddTable
+                {...props}
+              />
+            )}
+          /> */}
         </Switch>
       </Router>
     </div>
