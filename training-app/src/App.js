@@ -50,7 +50,6 @@ function App() {
     <div className="ui container">
       <Router>
         <Header />
-        <AddTable/>
         <Switch>
           <Route 
             path="/" 
@@ -71,14 +70,14 @@ function App() {
                 addContactHandler={addContactHandler} />
             )}
           />
-          {/* <Route
-            path="table"
+          <Route
+            path="/table"
             render={(props) => (
               <AddTable
                 {...props}
               />
             )}
-          /> */}
+          />
         </Switch>
       </Router>
     </div>
