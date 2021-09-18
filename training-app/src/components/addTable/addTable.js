@@ -24,11 +24,13 @@ function AddTable () {
         
         for (let i = 1; i <= rowCount; i++) {
             rowArray.push(i);
+            console.log("this is for the row: ", i);
         };
         setRowArray(rowArray);
     
         for (let i = 1; i <= colCount; i++) {
             colArray.push(i);
+            console.log("this for the column: ", i);
         };
         setColArray(colArray);
 
@@ -64,7 +66,7 @@ function AddTable () {
                             />
                         </TableCell>
                         <TableCell>
-                            <Button variant="contained" color="red" onClick={CreateTable} >
+                            <Button variant="contained" color="primary" onClick={CreateTable} >
                                 click me
                             </Button>
                         </TableCell>
