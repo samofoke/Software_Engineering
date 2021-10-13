@@ -63,7 +63,7 @@ function AddTable () {
                                 id="xl"
                                 value={colCount}
                                 onChange={(e) => setCol(e.target.value)}
-                            />
+                            /> 
                         </TableCell>
                         <TableCell>
                             <Button variant="contained" color="primary" onClick={CreateTable} >
@@ -73,7 +73,7 @@ function AddTable () {
                     </TableRow>
                 </TableBody>
             </Table>
-            {showTable ? (
+            {showTable ? ( 
                 <Table>
                     <TableBody>
                         {rowArray.map((r, i) => (
@@ -81,8 +81,8 @@ function AddTable () {
                                 {colArray.map((c, i) => (
                                     <TableCell key={i} >
                                         R {r} - C {c}
-                                    </TableCell>
-                                ))}
+                                    </TableCell> 
+                                ))} 
                             </TableRow>
                         ))}
                     </TableBody>
