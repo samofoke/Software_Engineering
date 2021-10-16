@@ -27,3 +27,27 @@
 //--> String are immutable, methods like replace(), toUpperCase() return
 //new strings and they do not modify string which they are 
 //invoked(call upon a function)
+//
+//-->Looking at Template Literals ${} this is a JavaScript expression
+//
+//-->Pattern Maching -this datatype is known as Regular Expresions
+//This just as overview of Regular Expressions
+//--/^HTML/ this matches the latters of html at the start of th string.
+//--/[1-9][0-9]*/ it matches the nonzero digit, followed by any # of digits.
+//--The pattern /\d+/g this matches all instances of one or more digits.
+//text.slpit(/\D+/) this splits on nondigits
+//
+//--> Boolean Values are commonly used for control structure.
+//Using the typeof operator on null return a string object as null can be 
+//thought as an object which indicates no object.
+//
+//-->The Global Object
+//It is a regular Javascript object that serves a very important purpose
+//Primitives Values
+//--Undefined, null, boleans, numbers and strings.
+//Primitives are immutable
+//Primitives are also compared by value: two values are the same only if
+//they have the same value.
+//
+//Objects are different than primitives because they are mutable
+//they values can change.
