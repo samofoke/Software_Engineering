@@ -51,3 +51,27 @@
 //
 //Objects are different than primitives because they are mutable
 //they values can change.
+//
+//let num = {x: 1} //this is our object 
+//we mutate the value by changong it
+//num.x = 3;
+//An Array is also mutable as well
+//let arr = [3, 4, 5, 6];
+//arr[2] = 8;
+//-->Object values are references let x =[] let y = x and then y[0] = 2;
+//then we check for x[0] at index 0.
+//
+//coping the elements of the Array to show that object values are references
+//
+//let arr = ["h", "e", "l", "l", "o"];
+//let copy_me = [];
+//
+//for (let index = 0; index < arr.length; index++) {
+//  copy_me[index] = arr[index];
+//}
+//let cpy = Array.from(copy_me);
+//
+//--> Type Conversions
+//This relates to adding a string to a number it will convert it to a string
+//
+//
