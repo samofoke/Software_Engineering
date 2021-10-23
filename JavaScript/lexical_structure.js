@@ -73,5 +73,20 @@
 //
 //--> Type Conversions
 //This relates to adding a string to a number it will convert it to a string
+//The convertability of one value to another does not meaning equality of
+//those two values.
 //
 //
+//-->Explicit Conversions we can use this functions boolean(), Number()
+//and string() as examples.
+//
+//This is a boolean expression !!x this checking for not doubles.
+//
+//The toString() method defined by a number class accepts am optional
+//argument that specifies a radix(parameter is used to specify which 
+//numeral system to be used) in this case base examples.
+//
+//let num = 8;
+//binary = "0b" + num.toString(2);
+//octal = "0o" + num.toString(8);
+//hex = "0x" + num.toString(16);
