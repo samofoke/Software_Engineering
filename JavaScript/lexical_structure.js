@@ -127,6 +127,14 @@ function (x) {
 //converting a date let d = new Date(2021, 10, 3);
 //d.toString()
 //
+//Objects are compound values, and most objects cannot really be represented 
+//by a single primitive value, so the default valueOf() method simply returns
+//the object itself rather than returning a primitive.
+//
+//
+//
+//
+//
 //
 //
 //
