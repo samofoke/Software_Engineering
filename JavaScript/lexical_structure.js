@@ -90,3 +90,67 @@
 //binary = "0b" + num.toString(2);
 //octal = "0o" + num.toString(8);
 //hex = "0x" + num.toString(16);
+//
+//If you try to pass a string to a Number() conversion function it attempts
+//to parse that string as a interger or a floating-point literal. and that 
+//function only works for base 10 int.
+//
+//toPrecision() converts a number to a string with the number of significant
+//digits you specify.This are number formatting methods.
+//
+//parseFloat() parses both int and floating-point numbers.
+//
+//Object to Primitive Conversions.
+//prefer-string / prefer number--> This algo returns a primitive value if a 
+//conversion to string or number is possible.
+//
+//no-preference--> This algo expresses no preference about what type of
+//premitive value is desired, so classes can define they own conversions.
+//
+//Object to bloolean conversions.
+//All objects convert to true, so this states that objects, empty array 
+//even a wrapper object new Boolean(false);.
+//
+//The toString() method of the Array class, for example, converts each array 
+//element to a string and joins the resulting strings together with 
+//commas in between.
+//
+//The RegExp class defines a toString() method that converts RegExp objects 
+//to a string that looks like a RegExp literal:
+//
+//[1, 2, 3, 4].toString()
+
+function (x) {
+    f(x);
+}//this function can be converted to a string using toString()
+//
+//converting a date let d = new Date(2021, 10, 3);
+//d.toString()
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
