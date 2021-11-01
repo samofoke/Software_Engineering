@@ -129,7 +129,7 @@ function (x) {
 //
 //Objects are compound values, and most objects cannot really be represented 
 //by a single primitive value, so the default valueOf() method simply returns
-//the object itself rather than returning a primitive.
+//the object itself rather than returning a primitivei.
 //
 //
 //
