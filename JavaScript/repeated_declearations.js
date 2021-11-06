@@ -57,6 +57,15 @@ for (const [name, value] of Object.entries(pair_variables)) {
     console.log(name, value);
 }
 
+/* The is a technique that allows you to destructure an Array by using 3 dots
+ * (...var)
+ * example will be let [x, ...y] = [1, 2, 3, 4, 5, 6]
+ * which will print out x as 1 and y as [2, 3, 4, 5, 6]
+ */
+
+let [x2, ...y2] = [2, 4, 6, 8, 10];
+console.log("after destructure: ", x2);
+console.log("after destructure: ", y2);
 
 
 
