@@ -47,6 +47,28 @@ console.log(convertCartesian(r, tr));
 /* On this line I am printing out what I ahve destructured on get_coordinates.
  */
 
+/* Creating a loop to go through key value pairs of an object and using 
+ * destructuring assignment to convert pairs of elements into an array of 
+ * individual variables.
+ */
+
+let pair_variables = {x1: 3, y1: 6};
+for (const [name, value] of Object.entries(pair_variables)) {
+    console.log(name, value);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
