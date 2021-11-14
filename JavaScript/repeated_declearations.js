@@ -41,9 +41,9 @@ function convertCartesian(r, tr) {
 /*going to pass this function to get_coordinates
  */
 
-let [r, tr] = get_coordinates(1.1, 4.4);
+let [r1, tr] = get_coordinates(1.1, 4.4);
 
-console.log(convertCartesian(r, tr));
+console.log(convertCartesian(r1, tr));
 /* On this line I am printing out what I ahve destructured on get_coordinates.
  */
 
@@ -63,25 +63,47 @@ for (const [name, value] of Object.entries(pair_variables)) {
  * which will print out x as 1 and y as [2, 3, 4, 5, 6]
  */
 
-let [x2, ...y2] = [2, 4, 6, 8, 10];
+let [x2, ...y2] = [2, 4, 6, 8, 10, 12, 14, 16, 20];
 console.log("after destructure: ", x2);
 console.log("after destructure: ", y2);
 
+/*Destructuring assignment can be used with nested arrays
+ */
 
+let [a3, [b3, c3], d3] = [[1, 2, 3, 4, 5], [2, 4, 6, 8], [10, 11, 12, 13]];
+console.log(a3);
+console.log(b3);
+console.log(c3);
+console.log(d3);
 
+/*The powerful feature of array destructuring is that doesn't not actually
+ * require an Array. One can use any iterable object.
+ */
 
+let [s1, ...s2] = "Hi I am a programmer";
+console.log(s1);
+console.log(s2);
 
+/*more example for destructuring assignment
+ */
 
+let trans = {r: 0.0, g: 0.0, b: 0.0, h: 1.0} //representing rgb colors
 
+let {r, g, b} = trans;
 
+console.log(trans);
+console.log(r, g, b);
+console.log("looking at the last element in our object", trans.h);
 
+//This is are examples of nested destructuring assignments.
 
+let points = [{p1: 1, p2: 2}, {p3: 3, p4: 4}];
 
+let [{p1: r2, p2: r3}, {p3: r4, p4: r5}] = points;
 
+console.log(points);
 
-
-
-
+//An epression is a phrase of that can be evaluated tp produce a value.
 
 
 
