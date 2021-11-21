@@ -55,6 +55,20 @@ console.log(ngl);
  * that an object initializer is an “object literal.”
  */
 
+//let square = function(x) { return x * x; };
+/*The function expression can also include a name for the function.
+ * A function can aslo be defined using a function Statement.
+ * In ES6 a function expression can be expressed using arrow function.
+ */
+
+/*A property access expression evaluates to the value of an object property
+ * or an array element.
+ */
+
+/*An example of an Object let objct ={x: 2, y: 3};
+ * An example of An Array that contains an object:
+ * let arr = ["a", 3, [3, 4]];
+ */
 
 
 
