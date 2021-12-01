@@ -117,7 +117,18 @@ function sqrt2(v, logx) {
     return v * v;
 }
 
+let a1 = null
+let z1 = 0;
 
+try {
+    a1?.(z1++);//by using the conditional invocation expression
+    //the TypeError stating that a1 is not a function at Object
+    //desappear.
+} catch(error) {
+    console.log("Well it seems I get the: ",error);
+}
+
+console.log(a1);
 
 
 
