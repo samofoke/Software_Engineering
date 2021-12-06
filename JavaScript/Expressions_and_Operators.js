@@ -128,7 +128,20 @@ try {
     console.log("Well it seems I get the: ",error);
 }
 
-console.log(a1);
+console.log(z1);
+//The console.log(a1) will print out a null and z1 will print out 0.
+
+/*n.m() // Regular property access, regular invocation
+ * n?.m() // Conditional property access, regular invocation
+ * n.m?.() // Regular property access, conditional invocation
+ */
+
+/*Object Creation Expression
+ * An object creation expression creates a new object and invokes a
+ * function (called a constructor) to initialize the properties of
+ * that object.
+ */
+
 
 
 
