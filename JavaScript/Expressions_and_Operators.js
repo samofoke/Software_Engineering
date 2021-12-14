@@ -142,6 +142,25 @@ console.log(z1);
  * that object.
  */
 
+/*In JavaScript, however, all numbers are floating-point, so all division 
+ * operations have floating-point results: 5/2 evaluates to 2.5, not 2. 
+ * Division by zero yields positive or negative infinity.
+ * the modulo operator is typically used with integer operands, it 
+ * also works for floating-point values.
+ */
+
+/*Equality and Inequality Operators
+ * Both operators accept operands of any type, and both return true if their 
+ * operands are the same and false if they are different. The === operator is 
+ * known as the strict equality operator (or sometimes the identity operator),
+ * and it checks whether its two operands are “identical” using a strict 
+ * definition of sameness. The == operator is known as the equality operator;
+ * it checks whether its two operands are “equal” using a more relaxed 
+ * definition of sameness that allows type conversions.
+ */
+
+
+
 
 
 
