@@ -157,9 +157,28 @@ console.log(z1);
  * definition of sameness. The == operator is known as the equality operator;
  * it checks whether its two operands are “equal” using a more relaxed 
  * definition of sameness that allows type conversions.
+ *
+ * The != inequality operator returns false if two values are equal to each 
+ * other according to == and returns true otherwise. The !== operator returns
+ * false if two values are strictly equal to each other and returns
+ * true otherwise.
  */
 
+function abs() {
+    let xa = '2';
+    let xb = 3;
+    let xc = 0;
+    for (let i = 0; i <= xc; i++) {
+        if (xa !== xb) {
+            return("strict equality states that is NAN.");
+        } else {
+            return("Well it seems to be running.");
+        }
+    }
+}
 
+abs();
+console.log(abs());
 
 
 
