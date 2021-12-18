@@ -180,6 +180,11 @@ function abs() {
 abs();
 console.log(abs());
 
+/*Remember that JavaScript strings are sequences of 16-bit integer values, and
+ * that string comparison is just a numerical comparison of the values in the 
+ * two strings.
+ */
+
 
 
 
