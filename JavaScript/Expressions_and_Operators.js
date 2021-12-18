@@ -185,6 +185,20 @@ console.log(abs());
  * two strings.
  */
 
+/* The In Operator
+ * The in operator expects a left-side operand that is a string, symbol, or 
+ * value that can be converted to a string. It expects a right-side operand 
+ * that is an object. It evaluates to true if the left-side value is the name
+ * of a property of the right-side object.
+ */
+
+let point = {xd: 2, xe: 4};
+
+while ("xd" in point) {
+    console.log("The property is inside the object: ", point.xd);
+    break;
+}
+//checking if the xd property exists in the object
 
 
 
