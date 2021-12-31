@@ -200,6 +200,46 @@ while ("xd" in point) {
 }
 //checking if the xd property exists in the object
 
+//more examples
+let s1 = {s2: 2};
+let p1 = null;
+console.log("We checking if we can evaluate s1.s2: ",s1 && s1.s2);
+console.log("We checking if we can evaluate p1.s2: ",p1 && p1.s2);
+
+//let = ValueTruthly || prefered.ValueTruthly || 500(give out an inernal error);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
