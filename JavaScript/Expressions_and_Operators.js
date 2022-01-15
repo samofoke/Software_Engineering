@@ -208,33 +208,20 @@ console.log("We checking if we can evaluate p1.s2: ",p1 && p1.s2);
 
 //let = ValueTruthly || prefered.ValueTruthly || 500(give out an inernal error);
 
+//ternary operator
+let b = 4;
+let n = 5;
 
+console.log(b > n ? "w":"X");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*The typeOf Operator
+ * typeof is a unary operator that is placed before its single operand, which
+ * can be of any type. We have undefined, null, trueor false, any number or 
+ * NaN, Bigint, string, symol, any function and  any nonfunction object.
+ *  Because typeof evaluates to “object” for all object and array values other
+ *  than functions, it is useful only to distinguish objects from other,
+ *  primitive types. In order to distinguish one class of object from another.
+ */
 
 
 
