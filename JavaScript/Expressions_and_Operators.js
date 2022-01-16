@@ -223,6 +223,10 @@ console.log(b > n ? "w":"X");
  *  primitive types. In order to distinguish one class of object from another.
  */
 
+/*The void operator
+ * it is a unary operator that apears before it's single operand, which may be
+ * of any type.
+ */
 
 
 
