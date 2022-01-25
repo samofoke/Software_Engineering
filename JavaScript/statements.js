@@ -29,5 +29,33 @@
         }
     }
     console.log(pass(5));
+    *
+    * for a switch statement to match a case it is safe to use === identity
+    * operator to avoid any type conversion.
     */
+/* A deep look into loops
+ * JavaScript has 5 looping statements 
+ * while, do/while, for, for/of(this for await concept) and for/in.
+ * The common use of loops is to iterate over the elements of an Array.\
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
