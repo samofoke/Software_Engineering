@@ -38,7 +38,24 @@
  * while, do/while, for, for/of(this for await concept) and for/in.
  * The common use of loops is to iterate over the elements of an Array.\
  */
+/*Loops
+ *
+ * while
+ * the Syntax
+ * while(expression){
+ *  statement
+ * }
+ * firstly we evualte the expression, and check if the expression is truthy or
+ * falsy and if it is true we execute the statement but if it false we skip the
+ * block.
+ * an example
+ */
 
+let c = 0;
+while (c < 4) {
+    console.log(c);
+    c++;
+}
 
 
 
