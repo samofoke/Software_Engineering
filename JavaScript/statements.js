@@ -51,13 +51,39 @@
  * an example
  */
 
+/*
 let c = 0;
 while (c < 4) {
     console.log(c);
     c++;
 }
+*/
+
+/*In this case the expression is true as c < 4 until the expression becomes
+ * false and the block of code stops from running.
+ */
+
+//A do/while loop sample
+
+let a = [2, 4, 6, 10, 12, 14, 16];
+
+function printArray(arr) {
+    
+    let len = arr.length;
+    let x =0;
+    if (len === 0) {
+        console.log("The Array is empty.");
+    }else {
+        do {
+            console.log(arr[x]);
+        }while (++x < len);
+    }
+}
 
 
+const outPut = printArray(a);
+
+console.log(outPut);
 
 
 
