@@ -7,3 +7,4 @@
     - mathematical proofs and,
     - propositional logic.
 ~~~
+### I will be looking at declarative, causal, procedural and contextual on a high level.
