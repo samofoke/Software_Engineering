@@ -55,3 +55,7 @@
     -  If f: X × X → X, then f is called a binary operation on X.
     -  *, , as well as the more familiar symbols  ⋅,  +, −, and  ×  are often used to denote binary
 ~~~
+### Number Systems
+- number system Z+
+  We looking at the set of all positive integers namely numbers 1, 2, 3,4, 5, 6...
+
