@@ -39,5 +39,19 @@
     -  (A ∩ B is a set that contains those elements common to both set A and  to set B).
     -  ∪ denotes “union” (A ∪ B is a set that contains those elements in set A or set B).
     -  If A and B are sets, then A − B denotes the difference between A and B 
-    -  (the set that contains those elements in A that are not in B). 
+    -  (the set that contains those elements in A that are not in B).
+    -  If A is a set, A′ denotes the complement of A (the set that contains those elements of some  universal set U that are not in A, i.e. U – A = A′).
+    -  If A and B are sets, A + B denotes the symmetric difference between A and B (the set that  contains those elements in either A or B, but not in both).
+    -  If A is a set, |A| or n(A) denotes the number of elements in A.
+    -  (a, b) denotes the ordered pair with a as first and b as second co-ordinate.
+    -  If A and B are sets, A × B denotes the Cartesian product of A and B.
+    -  (x1, x2, ..., xn) denotes the ordered n-tuple with first co-ordinate x1, second co-ordinate x2, and so  on.
+    -  Ƥ  is a funny P that denotes “the power set of ...”.
+    -  If R is a relation on some set A, then R is a relation from A to A.
+    -  If R is a relation, then R-1 denotes the inverse relation of R.
+    -  S ￮ R denotes the composition of relations S and R. (We may write S ￮ R or R; S.    R; S reminds us that, in a certain sense, R is followed by S.)
+    -  f: A → B should be read “f is a function from set A to set B”.
+    -  [x] denotes the equivalence class of x with regard to some previously specified equivalence  relation.
+    -  If f: X × X → X, then f is called a binary operation on X.
+    -  *, , as well as the more familiar symbols  ⋅,  +, −, and  ×  are often used to denote binary
 ~~~
