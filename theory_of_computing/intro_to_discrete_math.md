@@ -8,3 +8,36 @@
     - propositional logic.
 ~~~
 ### I will be looking at declarative, causal, procedural and contextual on a high level.
+~~~
+ - Glossary for Symbols
+
+    -  p, q, r, etc. are used for propositions that have truth values.
+    -  ¬ denotes “it is not the case that”. 
+    -  ∧ denotes “and”.
+    -  ∨ denotes “or” meaning “either ..., or ..., or both”.
+    -  ∈ denotes “is a member of ...”.
+    -  ∀  denotes “for all”.
+    -  ∃  denotes “there exists (at least one)”.
+    -  → denotes “if ...  then ...”.
+    -  ↔ denotes “if and only if” (iff).
+    -  a mod b = r means that r is the remainder when a is divided by b.
+    -  Z is a funny Z that denotes the set of integers {...,−3, −2, −1, 0, 1, 2, 3, ...}.
+    -  Z+ which is the set of positive integers {1, 2, 3, 4, ...}.
+    -  Z≥ also denotes N,the set of non-negative integers (natural numbers) {0, 1, 2, 3, 4, ...}.
+    -  Q is a funny Q that denotes the set of all rational numbers, i.e. ratios of integers,
+    -  defined by the  set {a/b | a ∈ Z, b ∈ Z and b ≠ 0}.
+    -  Q+ denotes the set of positive rational numbers.
+    -  Q≥ denotes the set of non-negative rational numbers.
+    -  R is a funny R that denotes the set of all real numbers.
+    -  R+ denotes the set of positive real numbers.
+    -  R≥ denotes the set of non-negative real numbers.
+    -  |m| is the absolute value of m.
+    -  ⊆ denotes “is a subset of ...”.
+    -  ⊂ denotes “is a proper subset of ...”.
+    -  0/ denotes “the empty set”.
+    -  ∩ denotes “intersection” 
+    -  (A ∩ B is a set that contains those elements common to both set A and  to set B).
+    -  ∪ denotes “union” (A ∪ B is a set that contains those elements in set A or set B).
+    -  If A and B are sets, then A − B denotes the difference between A and B 
+    -  (the set that contains those elements in A that are not in B). 
+~~~
