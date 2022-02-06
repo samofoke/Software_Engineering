@@ -56,6 +56,44 @@
     -  *, , as well as the more familiar symbols  ⋅,  +, −, and  ×  are often used to denote binary
 ~~~
 ### Number Systems
-#### number system Z+
+
+##### number system Z+
  - We looking at the set of all positive integers namely numbers 1, 2, 3,4, 5, 6...
+~~~
+ Z+ = {1, 2, 3, 4...}
+ 
+ - Commutative Property
+    * This are rules specifying property of addition and multiplication for all
+    positive numbers.
+
+    a, m + n = n + m
+    b, (m)(n) = (n)(m)
+
+    * This states that if you add m and n you will get the same results whether you
+    start with n or m.
+    - for example
+    if n = 3 and m = 2 this will evaluate to 5.
+    3 + 2 = 5
+    2 + 3 = 5
+
+    -This is also true for multiplication
+    3 * 2 = 6
+    2 * 3 = 6
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
