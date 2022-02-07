@@ -73,12 +73,19 @@
     start with n or m.
     - for example
     if n = 3 and m = 2 this will evaluate to 5.
-    3 + 2 = 5
-    2 + 3 = 5
+    (3 + 2 = 5) = (2 + 3 = 5)
 
     -This is also true for multiplication
-    3 * 2 = 6
-    2 * 3 = 6
+    ( (3)(2) = 6) = ( (2)(3) = 6)
+
+ - Associative Property
+    * This states that how we group the factors they don't affect the product of 
+    positive integers.
+
+    a, m + (n + k) = (m + n) + k
+    b, (m)(nk) = (mn)(k)
+    
+    * 
 ~~~
 
 
