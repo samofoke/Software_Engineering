@@ -84,7 +84,7 @@ function printArray(arr) {
 const outPut = printArray(a);
 
 console.log(outPut);
-
+//lesson ended on page 212
 
 
 

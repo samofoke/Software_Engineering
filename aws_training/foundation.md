@@ -20,4 +20,20 @@
     - North Virgina Region they're labeled as us-east-1a for example
 - Infrastructure as Service(IaaS) Compute
   - for EC2 we Select launch and choose an Amazon machine Image(AMI), you will have to choose a an instance type, this include vCPUs, memory and network performance.
-  -
+  - You have to make sure you launch and save your key pair, also make sure you have your instance selected before running it.
+  ~~~
+    This process is running your private key of aws on your local machine
+    - chmod 400 ~/.ssh/my_aws_file
+    and run:
+    ssh -i "/.ssh/my_file" ubuntu if we running an aws image
+    it will authenticate and you to say yes.
+  ~~~
+  - EC2 Types
+    - Micro Instances
+    - General purpose
+    - Compute Optimized
+    - FPGA Instances
+    - GPU Instances
+    - Memory Optimized
+    - Storage Optimized
+  - 

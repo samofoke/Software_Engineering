@@ -85,7 +85,7 @@
     a, m + (n + k) = (m + n) + k
     b, (m)(nk) = (mn)(k)
     
-    * ended on page 21,
+    * ended on page 22,
     * 
 ~~~
 
