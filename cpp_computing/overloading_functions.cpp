@@ -15,7 +15,14 @@ using namespace std;
  * This is the example expressing function calls
  * on page 221
  * fabs is an abbreviation for floating-point absolute value.
- * The function pow(power) always returns a type double. 
+ * The function pow(power) always returns a type double.
+ * looking at Random Number Generation
+ * C++ has a predefined function
+ * Ri = (Ri-1 * 7)% 11 in this it will be.
+ * (1 * 7)% 11 = 7
+ * to simulate this on C++ we use srand from the cstdlib library, ctime() as
+ * well to use the predefined function time. We can use rand() to generate
+ * random int.
  *
 
 int main()
