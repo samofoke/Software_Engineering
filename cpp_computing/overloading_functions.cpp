@@ -13,7 +13,10 @@ using namespace std;
  * C++ comes with predefined functions and this is how they used, the sqrt
  * function for example getRoot = sqrt(5.0); and this is our function call
  * This is the example expressing function calls
- */
+ * on page 221
+ * fabs is an abbreviation for floating-point absolute value.
+ * The function pow(power) always returns a type double. 
+ *
 
 int main()
 {
@@ -34,6 +37,25 @@ int main()
     cout << "The length will be: "<< length_of_the_sides << " for each side\n";
     return(0);
 }
+*/
 
-//on page 221
+int main()
+{
+    double x;
+    double y;
+    cout << "Enter your numbers: ";
+    cin >> x >> y;
+    double result = pow(x, y);
+    cout << "The answer is: " << result <<"\n";
+    return(0);
+}
+
+
+
+
+
+
+
+
+
 
