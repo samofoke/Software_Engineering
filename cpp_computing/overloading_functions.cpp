@@ -23,7 +23,6 @@ using namespace std;
  * to simulate this on C++ we use srand from the cstdlib library, ctime() as
  * well to use the predefined function time. We can use rand() to generate
  * random int.
- *
 
 int main()
 {
@@ -45,7 +44,7 @@ int main()
     return(0);
 }
 */
-
+/*
 int main()
 {
     double x;
@@ -56,6 +55,34 @@ int main()
     cout << "The answer is: " << result <<"\n";
     return(0);
 }
+*/
+
+/* Type Casting
+ * This allows us to convert and int into a double by typing:
+ * static_cast<double>(9)/2;
+ */
+
+int main()
+{
+    int x;
+
+    double answer_one = 0;
+    cout << "Not coverted yet: " << answer_one <<"\n";
+    cout << "Enter: ";
+    cin >> x;
+    answer_one = static_cast<double>(x) / 3;
+    cout << "After type casting: " << answer_one <<"\n";
+    return(0);
+}
+
+
+
+
+
+
+
+
+
 
 
 
