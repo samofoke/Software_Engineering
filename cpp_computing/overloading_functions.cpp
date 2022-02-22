@@ -60,6 +60,7 @@ int main()
 /* Type Casting
  * This allows us to convert and int into a double by typing:
  * static_cast<double>(9)/2;
+ * page 226
  */
 
 int main()
