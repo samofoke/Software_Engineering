@@ -85,6 +85,42 @@ const outPut = printArray(a);
 
 console.log(outPut);
 //lesson ended on page 212
+//An example of a for loop:
+/* for(init; test; increment){
+ *  statement
+ * }
+ *
+ * example of a while vs a for loop
+ *
+ * init;
+ * while(test) {
+ *  statement;
+ *  increment;
+ * }
+ * */
+
+for(let c = 0; c <= 5; c++) {
+    console.log(c);
+}
+
+/* This example we extending the for loop
+ */
+function com_loop() {
+    let x, y;
+    let s = 0;
+
+    for(x = 0, y = 4; x <= 4; x++, y--) {
+        console.log("my x is: ", x);
+        console.log("my y is: ", y);
+        s += x * y;
+    }
+    console.log("The sum is: ", s);
+}
+
+console.log(com_loop());
+/* runing console inside the for loop is to virtualize the behaviour of x 
+ * and y values.
+ */
 
 
 
