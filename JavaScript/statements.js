@@ -120,7 +120,36 @@ function com_loop() {
 console.log(com_loop());
 /* runing console inside the for loop is to virtualize the behaviour of x 
  * and y values.
+ * page 215
+ *
+ * looking at an example of a for loop in linked list data structure and return
+ * last object in the list.
+ *
+ * function tail(x) {
+ *      for(; x.next; x = x.next);
+ *      return x
+ * }
  */
+
+/* looking into for/of, This is a new kind for loop and this for loop works with
+ * iterable objects for example arrays, strings, sets and maps. They represent
+ * a squence or set of elements that you can loop through.
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
