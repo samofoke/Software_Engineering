@@ -136,8 +136,12 @@ console.log(com_loop());
  * a squence or set of elements that you can loop through.
  */
 
-
-
+let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let sum = 0;
+for(let element of data) {
+    sum = sum + element;
+}
+console.log("The sum of the elements", sum);
 
 
 
