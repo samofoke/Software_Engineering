@@ -136,13 +136,32 @@ console.log(com_loop());
  * a squence or set of elements that you can loop through.
  */
 
-let data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-let sum = 0;
-for(let element of data) {
-    sum = sum + element;
+function forOfLoop() {
+    let data = [1, 2, 3, 4, 5];
+    let sum = 0;
+    for(let element of data) {
+        console.log("print each element: ", element);
+        sum = sum + element;
+    }
+    console.log("The sum of the elements", sum);
 }
-console.log("The sum of the elements", sum);
 
+forOfLoop();
+
+/*Objects are not (by default) iterable and in so doing so you get a TypeError
+ * during runtime.
+ * An example.
+ */
+
+function oberror() {
+    let errLoop = {x: 1, y: 2, z: 3};
+    for(let element of errLoop) {
+        console.log("My iterable: ", element);
+    }
+}
+/* with this function oberror we get a runtime error because the object is not
+ * iterable.
+ */
 
 
 
