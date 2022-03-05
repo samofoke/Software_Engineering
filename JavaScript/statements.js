@@ -161,8 +161,20 @@ function oberror() {
 }
 /* with this function oberror we get a runtime error because the object is not
  * iterable.
+ * You can iterate through the properties of an object with Object.keys() method.
+ * if you want values you can just say Object.values().
  */
 
+function abkeys() {
+    let ob = {x: 1, y: 2, z: 3};
+    let k = "";
+    for(let i of Object.keys(ob)) {//Object.values();
+        k = k + i;//k += i;
+    }
+    console.log("The output of keys: ", k);
+}
+
+abkeys();
 
 
 
