@@ -176,17 +176,52 @@ function abkeys() {
 
 abkeys();
 
+/* if you want keys and values you write your for loop like this:
+ * for(let [x, y] of Object.entries()){
+ *      p += x + y;
+ * }
+ * Object.entries returns an array of arrays which an inner array represents
+ * a key/value pair of an object.
+ * We look at an example with Set and Map as they're iterable Objects.
+ * This an example when you want to print unique words in a string.
+ */
 
+function uniqueWords() {
+    let text = "Sabata sas sas look moon  out for  out sas in the moon";
+    let n = new Set(text.split(" "));
+    let u = [];
+    for(let w of n) {
+        u.push((w));//adding new elements in a array.
+    }
+    console.log("add unique words: ", n);
+}
 
+uniqueWords();
 
+/* Example for Maps.
+ */
 
+function mapData() {
+    let m = new Map([[1, "one", 2, "two"]]);
+    for(let [key, value] of m) {
+        console.log(key, value);
+    }
+}
 
+mapData();
 
+/* The is an asynchronous iteration known us for/wait loop.
+ */
 
+async function printStream(s) {
+    for await(let i of s) {
+        console.log(i);
+    }
+}
 
+let d = [1, 2, 3, 4, 5];
 
-
-
+printStream(d);
 
 
 
