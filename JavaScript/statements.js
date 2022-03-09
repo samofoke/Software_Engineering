@@ -259,8 +259,32 @@ printStream(d);
  *      success = true;
  * }
  *
- *
+ * The yield statement is much like the return statement.
+ * but yield is an operator rather than a statement.
  */
+
+/* throw is an exceptional condition or to indicate an error has occured.
+ * exceptions are thrown whenever a runtime error occurs and the exceptions are
+ * caught with the try/catch/finally statement.
+ */
+
+/* We look at try/catch/finally
+ * This are exception handling mechanism.try is simply a statement whose exception
+ * can be handled and the try block is followed by a catch.
+ * A sample
+ * try {
+ *      let n = Number(prompt("enter number: "));
+ *      let f = factorial(n);
+ *      alert(n + "! = " + f);
+ *
+ *      } catch(err){
+ *          alert(err);
+ *      }
+ * I ended on page 235
+ */
+
+
+
 
 
 
