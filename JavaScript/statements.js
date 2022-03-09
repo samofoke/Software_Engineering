@@ -224,6 +224,44 @@ let d = [1, 2, 3, 4, 5];
 printStream(d);
 
 
+/* Jumpp Statements this states jumping into new locations of the code
+ * we have break, continue, return and throw.
+ * page 224
+ * The concept of labeled statements, an example:
+ * mainloop: while(t !== null) {
+ *      continue mainloop; this allows it to jump to the specified loop
+ * }
+ *
+ * Sample of break.
+ * for(let i = 0; i < a.length; i++) {
+ *      if (a[i] === t)
+ *      break;//the break can be followed by a label name.
+ * }
+ *
+ * This is an example of label name.
+ *
+ * let matrix = getData();
+ *
+ * let sum = 0, success = false;
+ *
+ * computeSum: if (matrix) {
+ *      for(let x = 0; x <= matrix.length; x++) {
+ *          let r = matrix[x];
+ *          if (!r)
+ *              break computeSum;
+ *          for(let y = 0; y < r.length; y++) {
+ *              let cell = r[y];
+ *              if (isNaN(cell))
+ *                  break computeSum;
+ *              sum += cell;
+ *          }
+ *      }
+ *      success = true;
+ * }
+ *
+ *
+ */
+
 
 
 
