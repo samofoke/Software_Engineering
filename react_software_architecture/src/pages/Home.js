@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 
-const Home = () => {
+function Home() {
     return(
-        <h1>Home really</h1>
+        <h1>This is the Home page</h1>
     )
 }
 
