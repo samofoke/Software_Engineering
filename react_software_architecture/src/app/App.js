@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import PostPage from './pages/Post';
-import About from './pages/About';
+import HomePage from '../pages/Home';
+import PostPage from '../pages/Post';
+import AboutPage from '../pages/About';
 
 function App() {
   return (
@@ -21,9 +21,9 @@ function App() {
         </ul>
       </div>
       <Routes>
-        <Route exact path='/' element={<Home />}/>
+        <Route exact path='/' element={<HomePage />}/>
         <Route path='/post' element={<PostPage />}/>
-        <Route path='/about' element={<About />}/>
+        <Route path='/about' element={<AboutPage />}/>
       </Routes>
     </BrowserRouter>
   );
