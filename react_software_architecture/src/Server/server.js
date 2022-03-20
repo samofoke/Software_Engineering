@@ -1,15 +1,21 @@
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
+import HomePage from '../pages/Home';
 
 
 const app = express();
 
 const PORT = 8080;
 
+
+app.use(express.static('./build', {index: false}));
+
+
+
 app.get('/*', (req, res) => {
     const getReactApp = renderToString(
-        <h1>I am able to access the Server</h1>
+        <HomePage />
     );
 
     return res.send(`
