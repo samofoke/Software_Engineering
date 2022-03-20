@@ -1,12 +1,12 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from '../pages/Home';
 import PostPage from '../pages/Post';
 import AboutPage from '../pages/About';
 
 function App() {
   return (
-    <BrowserRouter>
+    <>
       <div>
         <ul>
           <li>
@@ -25,7 +25,7 @@ function App() {
         <Route path='/post' element={<PostPage />}/>
         <Route path='/about' element={<AboutPage />}/>
       </Routes>
-    </BrowserRouter>
+    </>
   );
 }
 

@@ -1,7 +1,10 @@
 import express from 'express';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import HomePage from '../pages/Home';
+import { StaticRouter } from 'react-router-dom/server';
+import App from '../app/App';
+import path from 'path';
+import fs from 'fs';
 
 
 const app = express();
@@ -15,16 +18,22 @@ app.use(express.static('./build', {index: false}));
 
 app.get('/*', (req, res) => {
     const getReactApp = renderToString(
-        <HomePage />
+        <StaticRouter location={req.url}>
+            <App />
+        </StaticRouter>
     );
 
-    return res.send(`
-        <html>
-            <body>
-                <div id="root">${getReactApp}</div>
-            </body>
-        </html>
-    `);
+    const pullRootFile = path.resolve('./build/index.html');
+
+    fs.readFile(pullRootFile, 'utf-8', (err, data) => {
+        if (err){
+            return(res.status(500).send("They is a technical issue", err));
+        };
+
+        return res.send(
+            data.replace('<div id="root"></div', `<div id="root">${getReactApp}</div>`)
+        );
+    });
 });
 
 app.listen(PORT, () => {
