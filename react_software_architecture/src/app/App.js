@@ -3,11 +3,18 @@ import { Routes, Route, Link } from 'react-router-dom';
 import HomePage from '../pages/Home';
 import PostPage from '../pages/Post';
 import AboutPage from '../pages/About';
+import styled from 'styled-components';
+
+
+const AddGreen = styled.h1`
+  color: green;
+`;
 
 function App() {
   return (
     <>
       <div>
+        <AddGreen>Adding Styled Components on client side</AddGreen>  
         <ul>
           <li>
             <Link to="/" >Home</Link>
