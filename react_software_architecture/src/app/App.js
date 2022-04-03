@@ -5,6 +5,7 @@ import PostPage from '../pages/Post';
 import AboutPage from '../pages/About';
 import styled from 'styled-components';
 import HookButton from '../state_management/usestate_hooks/usehook';
+import MyContextHook from '../state_management/context_hooks/contexthook';
 
 
 const AddGreen = styled.h1`
@@ -29,6 +30,9 @@ function App() {
           <li>
             <Link to="/use" >useState</Link>
           </li>
+          <li>
+            <Link to="/context" >ContextHook</Link>
+          </li>
         </ul>
       </div>
       <Routes>
@@ -36,6 +40,7 @@ function App() {
         <Route path='/post' element={<PostPage />}/>
         <Route path='/about' element={<AboutPage />}/>
         <Route path='/use' element={<HookButton />}/>
+        <Route path='/context' element={<MyContextHook />}/>
       </Routes>
     </>
   );
