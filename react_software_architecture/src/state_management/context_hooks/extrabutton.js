@@ -1,7 +1,7 @@
-import React, { createContext } from "react";
+import React, { useState } from "react";
 
 
-function MyContextHook() {
+function ExtraButton() {
 
     return(
         <>
@@ -13,4 +13,4 @@ function MyContextHook() {
     )
 }
 
-export default MyContextHook;
+export default ExtraButton;
