@@ -281,8 +281,20 @@ printStream(d);
  *          alert(err);
  *      }
  * I ended on page 235
+ *
+ * We look at an example of finally
+ *
+ * Simulate for(init; test, int) body;
+ * init;
+ * while (test) {
+ *      try{
+ *          body;
+ *      }finally{
+ *          int;
+ *      }
+ * }
+ *
  */
-
 
 
 
