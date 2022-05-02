@@ -294,9 +294,35 @@ printStream(d);
  *      }
  * }
  *
+ * The with statement runs a block of code as if the properties of a specific
+ * object were variables in scope for that code.
+ *
+ * example 
+ * with(object)
+ *      statement
+ * 
+ * The with statement it make easier to work with deeply nested object hierachies
+ * for example:
+ * document.forms[0].address.value
+ * you can write a reusable function like this so that you don't repeat yourself
+ * with (document.forms[0]) {
+ *      name.value = "";
+ *      address.value = "";
+ *      email.value = "";
+ * }
+ *
+ * this limits you repeating yourself.
+ *
+ * -Debugger
+ *  The debugger statement normally does nothing, in practice this statement
+ *  acts like a breakpoint 
+ *
+ *  An axample
+ *  function f(o) {
+ *      if (o === undefined) debugger;
+ *      the rest of the function.
+ *  }
  */
-
-
 
 
 
