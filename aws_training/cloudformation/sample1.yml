@@ -1,0 +1,33 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: "CloudFormation template for s3 bucket including s3 bucket policy"
+
+Parameters:
+  S3BucketName:
+    Type: String
+    Default: s3-cloud-sample-bucket
+    Description: The name of the bucket
+
+Resources:
+  S3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Ref S3BucketName
+  S3bucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      PolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal: "*"
+            Action:
+              - "s3:GetObject"
+            Resource: !Sub "arn:aws:s3:::${S3Bucket}/*"
+      Bucket: !Ref S3Bucket
+
+Outputs:
+  S3BucketArn:
+    Description: uniquely identify AWS resources
+    Value: !GetAtt S3Bucket.Arn
+  S3BucketName:
+    Description: Bucket Created using this template.
+    Value: !Ref S3Bucket
