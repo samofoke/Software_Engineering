@@ -45,3 +45,11 @@
 - Docker Compose is for single machine coordination.
 - which is designed for testing and development.
 - It brings up all your containers, volumes, networks in one command.
+
+### Kubernetes
+
+- Containers run programs.
+- Pods group containers together.
+- Services make pods available to others.
+- It makes scriptinng large operations possible with the kubectl command.
+- Another example is EC2 Container Service(ECS)
