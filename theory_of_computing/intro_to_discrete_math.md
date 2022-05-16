@@ -1,18 +1,21 @@
 ## Notes on Discrete Mathematics
-~~~
+
+```
     I will be looking into:
     - Set theory.
     - relations and functions.
     - vectors and matrix manipulations.
     - mathematical proofs and,
     - propositional logic.
-~~~
+```
+
 ### I will be looking at declarative, causal, procedural and contextual on a high level.
-~~~
+
+```
  - Glossary for Symbols
 
     -  p, q, r, etc. are used for propositions that have truth values.
-    -  ¬ denotes “it is not the case that”. 
+    -  ¬ denotes “it is not the case that”.
     -  ∧ denotes “and”.
     -  ∨ denotes “or” meaning “either ..., or ..., or both”.
     -  ∈ denotes “is a member of ...”.
@@ -35,10 +38,10 @@
     -  ⊆ denotes “is a subset of ...”.
     -  ⊂ denotes “is a proper subset of ...”.
     -  0/ denotes “the empty set”.
-    -  ∩ denotes “intersection” 
+    -  ∩ denotes “intersection”
     -  (A ∩ B is a set that contains those elements common to both set A and  to set B).
     -  ∪ denotes “union” (A ∪ B is a set that contains those elements in set A or set B).
-    -  If A and B are sets, then A − B denotes the difference between A and B 
+    -  If A and B are sets, then A − B denotes the difference between A and B
     -  (the set that contains those elements in A that are not in B).
     -  If A is a set, A′ denotes the complement of A (the set that contains those elements of some  universal set U that are not in A, i.e. U – A = A′).
     -  If A and B are sets, A + B denotes the symmetric difference between A and B (the set that  contains those elements in either A or B, but not in both).
@@ -54,14 +57,17 @@
     -  [x] denotes the equivalence class of x with regard to some previously specified equivalence  relation.
     -  If f: X × X → X, then f is called a binary operation on X.
     -  *, , as well as the more familiar symbols  ⋅,  +, −, and  ×  are often used to denote binary
-~~~
+```
+
 ### Number Systems
 
-##### number system Z+
- - We looking at the set of all positive integers namely numbers 1, 2, 3,4, 5, 6...
-~~~
+#### number system Z+
+
+- We looking at the set of all positive integers namely numbers 1, 2, 3,4, 5, 6...
+
+```
  Z+ = {1, 2, 3, 4...}
- 
+
  - Commutative Property
     * This are rules specifying property of addition and multiplication for all
     positive numbers.
@@ -79,29 +85,44 @@
     ( (3)(2) = 6) = ( (2)(3) = 6)
 
  - Associative Property
-    * This states that how we group the factors they don't affect the product of 
+    * This states that how we group the factors they don't affect the product of
     positive integers.
 
     a, m + (n + k) = (m + n) + k
     b, (m)(nk) = (mn)(k)
-    
+
     * ended on page 22,
-    * 
-~~~
+    *
+```
 
+### The nine laws for Z\_>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- Law 1
+  - Commutativity: for all non-negative integers for m and n.
+  - m + n = m + n
+- Law 2
+  - Associativity: for all non-negative integers for m, n and k.
+  - m + (n + k) = (m + n) + k
+- Law 3
+  - Distributivity: for all non-negative integers for m, n and k.
+  - m(n + k) = (mn) + (mk)
+- Law 4
+  - Existence of a multiplicative identity element: for all non-negative integers for m.
+  - m\*1 = m
+- Law 5
+  - Linearity: for all non-negative integers for m and n, exactly one of the following statements are true
+  - m < n, m = n, m > n.
+- Law 6
+  - Monotonicity of + and x respectively: for all non-negative integers for m, n and k.
+  - if m = n, then m + k = n + k and mk = nk;
+  - if m < n, then m + k < n + k; and
+  - if k > 0, mk < nk.
+- Law 7
+  - Transivity of = and < respectively: for all non-negative integers for m, n and k.
+  - if m = n and n = k, then m = k and if m < n and n < k, then m < k.
+- Law 8
+  - Existence of an addictive identity element: for all non-negative integers for m.
+  - m + 0 = m.
+- Law 9
+  - Absence of zero-divisors: for all non-negative integers for m and n.
+  - mn = 0 if and only if m = 0 or n = 0.
