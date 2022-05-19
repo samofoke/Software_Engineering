@@ -324,8 +324,13 @@ printStream(d);
  *  }
  *
  *  page 244
+ *
+ *  -Values within a JavaScript module are private and cannot be imported into
+ *  other modules unless they have been explicitly exported.
  */
 
+/* Objects in JS
+ */
 
 
 

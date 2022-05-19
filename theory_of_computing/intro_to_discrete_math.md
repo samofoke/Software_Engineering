@@ -95,7 +95,7 @@
     *
 ```
 
-### The nine laws for Z\_>
+### The nine laws for Non-negative integers: Z≥
 
 - Law 1
   - Commutativity: for all non-negative integers for m and n.
@@ -126,3 +126,20 @@
 - Law 9
   - Absence of zero-divisors: for all non-negative integers for m and n.
   - mn = 0 if and only if m = 0 or n = 0.
+
+### Law for Integers Z
+
+- The non-negative integers holds for integers as well except for Monotonicity
+- Law 6
+  - Monotonicity: for all integers m, n and k.
+  - if m = n, then m + k = n + k and mk = nk;
+  - if m < n, then m + k < n + k;
+  - if k > 0, then mk < nk; and
+  - if k < 0, then mk > nk (negative numbers need to be taken into account)
+- Law 10
+  - Existence of additive inverse: for every integer m there exists an int n.
+  - m + n = 0.
+
+## Rational and real numbers: Q and R.
+
+-

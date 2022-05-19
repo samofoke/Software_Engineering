@@ -1,15 +1,39 @@
 AWSTemplateFormatVersion: 2010-09-09
 Description: "Creating an accessible s3 bucket configured for websites"
 
+Parameters:
+  S3BucketName:
+    Type: String
+    Default: mycloudtemplate.example.com
+    Description: The name of the bucket
+
 Resources:
   S3Bucket:
     Type: AWS::S3::Bucket
     Properties:
+      BucketName: !Ref S3BucketName
       AccessControl: PublicRead
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
-    DeletionPolicy: Retain 
+    DeletionPolicy: Retain
+  S3BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      PolicyDocument:
+        Version: 2012-10-17
+        Statement:
+          - Sid: PublicReadGetObject
+            Effect: Allow
+            Principal: "*"
+            Action:
+              - "s3:GetObject"
+            Resource: !Join
+              - ''
+              - - 'arn:aws:s3:::'
+                - !Ref S3Bucket
+                - /*
+      Bucket: !Ref S3Bucket
 
 Outputs:
   WebsiteURL:
