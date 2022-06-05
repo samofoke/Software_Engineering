@@ -26,3 +26,23 @@
     - exmaples: Instances, Elastic load balancing(ELB), VPCs, Elastic Block Store(EBS), volumes, S3 buckets.
 - Outputs
   - Declares the outputs to be displayed to the user once the stack creation or update has complated.
+
+### AWS Services
+
+- AWS services have three parts
+  - API
+  - Backend
+  - Storage
+- When we develop our template and create a stack, we invoke the cloudformation:CreateStack API method.
+
+  ```
+  AWSTemplateFormatVersion: "2010-09-09"
+  Description: this is a sample template for S3 Bucket
+  Resources:
+    MyS3bucket:
+      Type: AWS::S3::Bucket
+
+  This is how you run it on the AWScli
+
+  $ AWS cloudformation create-stack\--stack-name MyS3bucket\--template-body file://MyS3bucket.yml
+  ```
