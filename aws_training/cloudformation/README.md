@@ -41,8 +41,17 @@
   Resources:
     MyS3bucket:
       Type: AWS::S3::Bucket
+      Properties:
+        AccessControl: PublicRead
 
   This is how you run it on the AWScli
 
   $ AWS cloudformation create-stack\--stack-name MyS3bucket\--template-body file://MyS3bucket.yml
   ```
+
+- You can run this command to clean up your workspace.
+  ```
+  $ aws cloudformation delete-stack --stack-name mybucket
+  ```
+- Understanding Cloudformation IAM permissions.
+  - we
