@@ -32,3 +32,52 @@ let point2 = {x: point.x, y: point.y, z: point.y + 1}
 
 console.log(point2);
 
+let id_name = {
+    FirstName: "Sabata",
+    LastName: "Coder"
+}
+
+console.log(id_name);
+console.log(id_name.FirstName);
+
+/*An object literal is an expression that creates and initializes a new and
+ * distinct object each time it is evaluated.
+ * The New operator creates and initializes a new object.
+ * examples
+ */
+
+let objt = new Object(); /* creating an empty object */
+let d = new Date(); /* we creating a Date object displaying current time*/
+
+console.log(objt);
+console.log(d);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

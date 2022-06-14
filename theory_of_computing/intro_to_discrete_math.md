@@ -139,7 +139,13 @@
 - Law 10
   - Existence of additive inverse: for every integer m there exists an int n.
   - m + n = 0.
+- Submit assignment 2 by end of week 11 Study units 6.4, 6.5, 7
 
 ## Rational and real numbers: Q and R.
 
--
+$\large \text {Well this is an example, 2x = 1} \\ {2x\over2 } = {1\over2}$
+
+$\large x = {1\over2} \\ 2({1\over2}) = 1$
+
+$\large \text{This is proof that } x \text{ is } \large{1\over2}
+\text{ which proofs that the equation is solved}$

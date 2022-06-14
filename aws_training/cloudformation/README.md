@@ -54,4 +54,4 @@
   $ aws cloudformation delete-stack --stack-name mybucket
   ```
 - Understanding Cloudformation IAM permissions.
-  - we
+  - what cloudformation does it performs API calls.

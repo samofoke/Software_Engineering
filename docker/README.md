@@ -53,3 +53,7 @@
 - Services make pods available to others.
 - It makes scriptinng large operations possible with the kubectl command.
 - Another example is EC2 Container Service(ECS)
+
+## Dcoker Installation and configuration
+#### DCA prep
+  -  
