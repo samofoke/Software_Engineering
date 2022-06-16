@@ -143,7 +143,9 @@
 
 ## Rational and real numbers: Q and R.
 
-$\large \text {Well this is an example, 2x = 1} \\ {2x\over2 } = {1\over2}$
+$\large \text {Well this is an example, 2x = 1}$
+
+${2x\over2 } = {1\over2}$
 
 $\large x = {1\over2} \\ 2({1\over2}) = 1$
 
