@@ -151,3 +151,6 @@ $\large x = {1\over2} \\ 2({1\over2}) = 1$
 
 $\large \text{This is proof that } x \text{ is } \large{1\over2}
 \text{ which proofs that the equation is solved}$
+$\large \text{ We do not want q to be zero, i.e. we do  not want to allow division by zero.}$
+
+$\large \text{page 40 rational numbers}$

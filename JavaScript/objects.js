@@ -52,7 +52,17 @@ let d = new Date(); /* we creating a Date object displaying current time*/
 console.log(objt);
 console.log(d);
 
-
+//page 255
+/* Looking at Prototypes
+ * Objects created using the new keyword and a constructor invocation use
+ * the value of the prototype property of the constructor function as their
+ * prototype. So the object created by
+ *
+ * In this example objt01 inherits x and y properties.
+ */
+ 
+let objt01 = Object.create({x: 1, y: 2});
+console.log(objt01.x, objt01.y);
 
 
 
