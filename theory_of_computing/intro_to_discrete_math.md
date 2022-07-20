@@ -161,4 +161,6 @@ $\text{I am going through the basics of sets, }
 \{\, x \in \mathbb{R} \mid x > 2 \,\}
 \text{ This is a set of all real numbers greater than 2.}$
 
-$\large \text{We look at subsets.} \text{}$
+$\large \text{We look at subsets.}$
+
+$\text{If A and B are sets frrom a universal set U. ended on page 56.}$
