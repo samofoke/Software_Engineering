@@ -154,3 +154,11 @@ $\large \text{This is proof that } x \text{ is } \large{1\over2}
 $\large \text{ We do not want q to be zero, i.e. we do  not want to allow division by zero.}$
 
 $\large \text{page 40 rational numbers}$
+
+$\large \text{Going through Set Theory}$
+
+$\text{I am going through the basics of sets, }
+\{\, x \in \mathbb{R} \mid x > 2 \,\}
+\text{ This is a set of all real numbers greater than 2.}$
+
+$\large \text{We look at subsets.} \text{}$
