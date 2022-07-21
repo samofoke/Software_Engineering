@@ -158,9 +158,13 @@ $\large \text{page 40 rational numbers}$
 $\large \text{Going through Set Theory}$
 
 $\text{I am going through the basics of sets, }
-\{\, x \in \mathbb{R} \mid x > 2 \,\}
-\text{ This is a set of all real numbers greater than 2.}$
+\{\, x \in \mathbb{R} \mid x > 2 \,\}$
+$\text{ This is a set of all real numbers greater than 2.}$
 
 $\large \text{We look at subsets.}$
 
 $\text{If A and B are sets frrom a universal set U. ended on page 56.}$
+
+$\text{We look at proper sets and union as proper set in short will be } A \subset B \text{ or } A \subseteq B$
+$\text{ as for the union will be } A \cup B$
+$\text{more briefly will have } A \cup B = \{\, x \mid x \in A or x \in B \,\}$ 
