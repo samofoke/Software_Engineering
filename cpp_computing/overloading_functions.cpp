@@ -62,7 +62,7 @@ int main()
  * static_cast<double>(9)/2;
  * page 226
  */
-
+/*
 int main()
 {
     int x;
@@ -74,12 +74,19 @@ int main()
     answer_one = static_cast<double>(x) / 3;
     cout << "After type casting: " << answer_one <<"\n";
     return(0);
+}*/
+
+int main()
+{
+    int x;
+    int y;
+
+    x = 2;
+    y = 4;
+
+    cout <<"The result is: "<<static_cast<double>(y) * x<<"\n";
+    return(0);
 }
-
-
-
-
-
 
 
 
