@@ -167,4 +167,10 @@ $\text{If A and B are sets frrom a universal set U. ended on page 56.}$
 
 $\text{We look at proper sets and union as proper set in short will be } A \subset B \text{ or } A \subseteq B$
 $\text{ as for the union will be } A \cup B$
-$\text{more briefly will have } A \cup B = \{\, x \mid x \in A or x \in B \,\}$ 
+$\text{more briefly will have } A \cup B = \{\, x \mid x \in A or x \in B \,\}$
+
+$\text{Proofs involving Sets}$
+
+$\text{The shaded areas in the venn diagram represents the result of the} \\ \text{particular set operation and the whole rectangle represents the set U}$
+$\text{A Set: } A = \{\,x \mid x \not\in A \,\} \\ \text{we can see that on Set A the is no element x inside A i.e } (x \not\in A)$
+
