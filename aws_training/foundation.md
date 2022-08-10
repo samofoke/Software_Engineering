@@ -40,6 +40,10 @@
 
 ### Building a CI/CD pipeline
 * we config the EC2 instance and ssh inside it, this is a Linux image.
+* The DevOpps cycle is Development, QA and IT operations.
+* configuring the the git for the pippeline, so inside our instance we goinnng to rrun sudo yum update and after run sudo yum install git in our EC2 image.
+* Deep dive on CodeCommit
+    * 
 
 
 
