@@ -43,7 +43,13 @@
 * The DevOpps cycle is Development, QA and IT operations.
 * configuring the the git for the pippeline, so inside our instance we goinnng to rrun sudo yum update and after run sudo yum install git in our EC2 image.
 * Deep dive on CodeCommit
-    * 
+    * in terms of CodeCommit will look at it with HTTPS and SSH
+    * The HTTPS has credential helper and ssh works with RSA key pairs
+    * PORT access for https is 443 and ssh is port 22.
+    * https pros is that port 443 is open on firewalls, all data transfers are encrypted.
+    * https has issues with keychain on MacOS.
+    * ssh is efficient and all data transfers are encrypted.
+    * Firewall somtimes blocks port 22 for ssh.
 
 
 
