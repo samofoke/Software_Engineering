@@ -36,4 +36,24 @@
     - GPU Instances
     - Memory Optimized
     - Storage Optimized
-  - 
+  -
+
+### Building a CI/CD pipeline
+* we config the EC2 instance and ssh inside it, this is a Linux image.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
