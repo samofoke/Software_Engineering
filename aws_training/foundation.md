@@ -50,8 +50,12 @@
     * https has issues with keychain on MacOS.
     * ssh is efficient and all data transfers are encrypted.
     * Firewall somtimes blocks port 22 for ssh.
-
-
+    * In terms of configuring CodeCommit we have to set IAM roles.from IAM we will go to users 
+    * after creating the IAM roles we have to config git in our aws EC2 image for git hleper.
+    * in our CLI we need run git config --global credential.helper '!aws --profile codecommit credential-helper $@' 
+    * this allow us to access all our repos in our aws repos.
+    * after we need to double check our git config --global file for credentials.
+    *  
 
 
 
