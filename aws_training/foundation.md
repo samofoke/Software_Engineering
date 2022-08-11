@@ -55,7 +55,19 @@
     * in our CLI we need run git config --global credential.helper '!aws --profile codecommit credential-helper $@' 
     * this allow us to access all our repos in our aws repos.
     * after we need to double check our git config --global file for credentials.
-    *  
+    * We also have to configurre the the ssh on our local machine in order to be able to get an ssh-keygen.
+    * adding users to your EC2 instance
+        * sudo adduser "UserName"
+        * sudo su - "UserName"
+        * mkdir .ssh
+        * chmod 700 .ssh
+        * cd .ssh
+        * touch authorized_keys
+        * chmod 600 authorized_keys
+        * vim authorized_keys
+        * exit
+        * ssh -i "sshkey.pem" awsUser@ec2-54-235-62-167.compute-1.amazonaws.com  
+        * 
 
 
 
