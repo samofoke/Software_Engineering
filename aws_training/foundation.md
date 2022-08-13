@@ -66,8 +66,8 @@
         * chmod 600 authorized_keys
         * vim authorized_keys
         * exit
-        * ssh -i "sshkey.pem" awsUser@ec2-54-235-62-167.compute-1.amazonaws.com  
-        * 
+        * ssh -i "sshkey.pem" awsUser@ec2-54-235-62-167.compute-1.amazonaws.com
+    * Understanding CodeCommit in terms of the Dev Team 
 
 
 
