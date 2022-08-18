@@ -36,6 +36,20 @@
                        -React Search Filter
                        -React Hooks
    ``` 
+### The HTML Document
+- In the html document the html element represents the root element an example will be.
+    ~~~
+    <html>
+        
+        This element is also known as the document metadata which contains
+        machine readable information.
+        <head>
+        </head>
+
+        <body>
+        </body>
+    </html>
+    ~~~
 ### we can look at JSX for react and the representation of how it looks.
    ```
    const name = 'Josh Perez';
@@ -63,8 +77,4 @@
 
      myObject.passward = "shwrw2435%#$";
      This properties will be added to myObject
-    ``` 
-
-
-
-
+    ```
