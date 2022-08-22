@@ -36,4 +36,51 @@
     - GPU Instances
     - Memory Optimized
     - Storage Optimized
-  - 
+  -
+
+### Building a CI/CD pipeline
+* we config the EC2 instance and ssh inside it, this is a Linux image.
+* The DevOpps cycle is Development, QA and IT operations.
+* configuring the the git for the pippeline, so inside our instance we goinnng to rrun sudo yum update and after run sudo yum install git in our EC2 image.
+* Deep dive on CodeCommit
+    * in terms of CodeCommit will look at it with HTTPS and SSH
+    * The HTTPS has credential helper and ssh works with RSA key pairs
+    * PORT access for https is 443 and ssh is port 22.
+    * https pros is that port 443 is open on firewalls, all data transfers are encrypted.
+    * https has issues with keychain on MacOS.
+    * ssh is efficient and all data transfers are encrypted.
+    * Firewall somtimes blocks port 22 for ssh.
+    * In terms of configuring CodeCommit we have to set IAM roles.from IAM we will go to users 
+    * after creating the IAM roles we have to config git in our aws EC2 image for git hleper.
+    * in our CLI we need run git config --global credential.helper '!aws --profile codecommit credential-helper $@' 
+    * this allow us to access all our repos in our aws repos.
+    * after we need to double check our git config --global file for credentials.
+    * We also have to configurre the the ssh on our local machine in order to be able to get an ssh-keygen.
+    * adding users to your EC2 instance
+        * sudo adduser "UserName"
+        * sudo su - "UserName"
+        * mkdir .ssh
+        * chmod 700 .ssh
+        * cd .ssh
+        * touch authorized_keys
+        * chmod 600 authorized_keys
+        * vim authorized_keys
+        * exit
+        * ssh -i "sshkey.pem" awsUser@ec2-54-235-62-167.compute-1.amazonaws.com
+    * Understanding CodeCommit in terms of the Dev Team
+        *  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
