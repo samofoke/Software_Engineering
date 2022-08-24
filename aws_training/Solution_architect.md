@@ -117,6 +117,7 @@
 - Policy documents include groups, Users, Roles.
 - The best practice is to inherit permissions from permition.
 - Groups --> to Users
+- by default a user won't have permitions.
 - The principle of least privilage, allows assign users the privilage they need to do they job.
 - Access ID and serect access key are not the same as username and password.
 - 
