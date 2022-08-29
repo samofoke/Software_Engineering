@@ -82,9 +82,9 @@ int main()
     int y;
 
     x = 2;
-    y = 4;
+    y = 11;
 
-    cout <<"The result is: "<<static_cast<double>(y) * x<<"\n";
+    cout <<"The result is: "<<static_cast<double>(y) / x<<"\n";
     return(0);
 }
 

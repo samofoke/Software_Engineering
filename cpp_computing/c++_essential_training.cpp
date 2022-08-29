@@ -26,5 +26,13 @@
  *      printf("the num is %d", i);
  *      return(0);
  * }
+ *
+ * We look at pointers are data types int * ip; this is a pointer to an int value.
+ * ip = &x; we assigning the address.
+ * y = *ip we are dereferencing ip to y.
+ * this how we reference in C++ by int & y = x; this way we referencing from x.
+ * When you implement referencing is good to use a const int data type. 
  */
 
+/* Looking at primitive Array
+ *
