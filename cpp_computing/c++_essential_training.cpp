@@ -35,4 +35,34 @@
  */
 
 /* Looking at primitive Array
- *
+ * in an array elements are index.
+ * an example will be
+ */
+/*
+int main()
+{
+    int array[] = {1, 2, 3, 4, 5};
+    for(int i : array)
+    {
+        printf("%d", i);
+    }
+    puts("");
+    return(0);
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
