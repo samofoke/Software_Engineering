@@ -51,12 +51,28 @@ int main()
 }
 */
 
+/* conditional statements
+ * we have an if statemennt which evaluates a condition if is true or false.
+ * example
+ * we also have multiple conditions which we use a switch statement.
+ */
 
+/*
+int main()
+{
+    int x = 2;
+    int y = 4;
 
-
-
-
-
+    if(x >= y)
+    {
+        puts("you got it right!");
+    }
+    else {
+        puts("not on point yet....");
+    }
+    return(0);
+}
+*/
 
 
 
