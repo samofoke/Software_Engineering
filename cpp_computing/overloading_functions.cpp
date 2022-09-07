@@ -88,6 +88,25 @@ int main()
     return(0);
 }
 
+/* In C++ the is something called range-based loop
+ * an example of this is:
+ * for(int i : arr)
+ * {
+ *      printf("i is: %d\n"i);
+ * }
+ * The range-based loop is not really effective for strings because of the
+ * null terminate.
+ */
+
+
+
+
+
+
+
+
+
+
 
 
 
