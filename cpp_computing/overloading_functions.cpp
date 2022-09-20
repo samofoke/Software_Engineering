@@ -75,7 +75,7 @@ int main()
     cout << "After type casting: " << answer_one <<"\n";
     return(0);
 }*/
-
+/*
 int main()
 {
     int x;
@@ -87,6 +87,7 @@ int main()
     cout <<"The result is: "<<static_cast<double>(y) / x<<"\n";
     return(0);
 }
+*/
 
 /* In C++ the is something called range-based loop
  * an example of this is:
@@ -97,7 +98,30 @@ int main()
  * The range-based loop is not really effective for strings because of the
  * null terminate.
  */
+/* A function call is an expression consisting of the fucntion name followed
+ * by argumentsenclosed in parentheses.
+ */
 
+int main()
+{
+    const double cost_per_sqrt = 10.50;
+    double budget;
+    double area;
+    double length_side;
+
+    cout <<"Enter the required amount: ";
+    cin >> budget;
+    
+    area = budget / cost_per_sqrt;
+    length_side = sqrt(area);
+    
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    cout <<"The price is: "<< budget <<"\n";
+    cout <<"The length is: "<< length_side <<"\n"; 
+    return(0); 
+}
 
 
 
