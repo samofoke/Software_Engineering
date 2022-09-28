@@ -268,8 +268,26 @@
     - you can replicate objects from one bucket to another
     - objects in an existing bucket are not replicated automatically.
 
-### Prepping for the Exam
-- 
+### Elastic Compute Cloud(EC2) Overview
+- It is a secure, resizable compute capacity in the cloud.
+- EC2 pricing Options.
+    - on-demand, pay by the hour or seconds, depending on the type of instance.
+    - reserved, this capacity is for 1 to 3 years, over 75% discount.
+    - spot, purchase unused capacity.
+    - dedicated, this is more expensive, having a physical EC2.
+- On-demand Instance
+    - it is flexible low cost and flexible without anny upfront payment.
+    - short-term applications with unpredictable workloads.
+    - testing the water, building for development and testing.
+- reserved Instances
+    - predictable usage.
+    - specific capacity requirements.
+    - pay upfront.
+    - Statndard reserve instances save up to 72%.
+    - Covertable reserve instances save up to 54%.
+    - Scheduled reserved instances.
+- The command line
+    - This allows us to ssh to our EC2 instance, this can give us more control to go inside our virtual machines and configure our S3 buckets or run other commands needed to perform tasks.
 
 
 
