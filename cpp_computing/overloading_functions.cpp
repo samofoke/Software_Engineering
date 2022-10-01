@@ -76,6 +76,7 @@ int main()
     return(0);
 }*/
 
+/*
 int main()
 {
     int x;
@@ -87,7 +88,7 @@ int main()
     cout <<"The result is: "<<static_cast<double>(y) / x<<"\n";
     return(0);
 }
-
+*/
 /* In C++ the is something called range-based loop
  * an example of this is:
  * for(int i : arr)
@@ -98,7 +99,37 @@ int main()
  * null terminate.
  */
 
+/* A structure creates a data type that can be used to group items of possibly
+ * different types into a single type.
+ * example:
+ * struct S {
+ *      int;
+ *      string;
+ *      const;
+ * }
+ */
 
+int main()
+{
+    const double cost_per_sqr = 10.50;
+    double budget;
+    double area;
+    double length_size;
+
+    cout <<"Enter the amount for the budget: ";
+    cin >> budget;
+
+    area = budget / cost_per_sqr;
+    length_size = sqrt(area);
+
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    
+    cout <<"The budget is: "<< budget <<"\n";
+    cout <<"The length is: "<< length_size <<"\n";
+    return(0);
+}
 
 
 
