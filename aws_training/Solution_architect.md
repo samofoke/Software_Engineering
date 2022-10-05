@@ -288,11 +288,23 @@
     - Scheduled reserved instances.
 - The command line
     - This allows us to ssh to our EC2 instance, this can give us more control to go inside our virtual machines and configure our S3 buckets or run other commands needed to perform tasks.
-
-
-
-
-
-
-
-
+    - to access your aws services in your EC2 instances you need to have a user who has full access on the S3 bucket service on the the group policy.
+    - in order to acces this account you will have to copy your access ID and your secret access key to configure your aws cli in your EC2 instances.
+    - we can also create an S3 bucket inside our EC2 by running aws S3 mb S3://(The name of the bucket).
+    - we can also upload files to the bucket via the terminal to our S3 bucket.
+- We look at IAM role in terms of S3
+    - It is an idenity with permision policies to allows access on aws services.
+    - roles are temporary
+        - it doesn't really have long-term standardd.
+        - it provides temporary secuirty roles needed by the user.
+        - roles can allow cross-account access and this allow another account to interact with resources on another aws account.
+        - We can also see the policy summary
+- Secuirty groups and bootstrap scripts
+    - how cumputers communicate
+        - linux on ssh port 22.
+        - windows rdp port 3389.
+        - HTP web browsing port 80.
+        - HTTPS web browsing(SSL) port 443.
+    - secuirty groups 
+        - they are virtual firewalls for EC2 instance, by default everything is blocked.
+        - 
