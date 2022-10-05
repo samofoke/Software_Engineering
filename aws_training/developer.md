@@ -1,5 +1,29 @@
 ## Notes for Developer associate
 - The terms of availability Zone, the customer Data is cashed before you access it.
-- IAM 
-    - you need to understand about the root user.
+- IAM basics
+    - control of your AWS account.
+    - shared access to your AWS account.
+    - permissions.
+    - Identity Federation.
+    - IAM allows multi-factor Authentication and this allows - increase in access and resources.
+    - IAM
+        - Temporary Access.
+        - password policies.
+        - it integrated.
+        - Compliance it supports PCI DSS.
+    - Idenity Access Management
+        - user
+        - groups
+        - roles
+    - We also have to have to setup password policies in terms of requirements, we can also setup password expirations on the configure.
+    - We have IAM roles which AWS identity with permission policies that determine what the identity can and cannot do in AWS.
+    - Testing IAM permisions
+        - IAM Policy simulator
+        - you can validate the policy if it works.
+-  Elastic Compute Cloud(EC2)
+    - it running a virtual machines in the cloud.
+    - EC2 you only pay for what you use.
+    - The is no wasted capacity and you can grow and shrink when you need.
+- Pricing models for EC2
+    - On demand, you pay by the hour or seconds depending on the type of the instances.
     - 

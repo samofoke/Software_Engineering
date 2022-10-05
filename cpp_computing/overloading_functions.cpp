@@ -131,32 +131,6 @@ int main()
 
 
 
-int main() {
-    // Write C++ code here
-    const double cost_per_sqr = 10.50;
-    double budget;
-    double area;
-    double length_side;
-    
-    cout << "Enter the amount for the budget: ";
-    cin >> budget;
-    
-    area = budget / cost_per_sqr;
-    length_side = sqrt(area);
-    
-    cout.setf(ios::fixed);
-    cout.setf(ios::showpoint);
-    cout.precision(2);
-    cout <<"The budget is: "<< budget <<"\n";
-    cout <<"The leangth: " << length_of_the_sides <<"\n";
-    return 0;
-}
-
-
-
-
-
-
 
 
 
