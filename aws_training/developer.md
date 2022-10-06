@@ -33,4 +33,19 @@
             - Flexible workloads
             - Short-term Applications.
             - Testing the Application or the Cloud service.
-        - 
+        - Reserved Instances
+            - Predictable usage, applications with steady state.
+            - specific Capacity requirements applications that require reserved capacity.
+            - Pay up-front this payment reduce thier total computing costs.
+        - Types of reserved instances
+            - standard is up to 72% off demand price.
+            - covertable up to 54% on demand.
+            - Scheduled.
+        - Spot instances
+            - flexible start and end.
+            - low compute.
+            - an urgent need for large compute.
+- EC2 Instance Types
+    - Hardware.
+    - Capabilities different types of compute.
+    - Application requirements 
