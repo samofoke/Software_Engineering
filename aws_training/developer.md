@@ -49,3 +49,13 @@
     - Hardware.
     - Capabilities different types of compute.
     - Application requirements 
+    - more infor
+        - General purpose instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads. 
+        - Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. 
+        - Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory.
+        - Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+        - Storage optimized instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage.
+        - The is a monitor for your Ec2 instance which is CloudWatch by default.
+        - You can also add a bootstrap script in your Ec2 instance.
+        - When you want to ssh into your instance you have to run ec2-user@(Ip address) -i and the key pair.
+        - 
