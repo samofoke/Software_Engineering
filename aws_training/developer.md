@@ -29,4 +29,8 @@
     - Reserved instances capacity may be 1 or 3 years and you can get 72% discuont and this is reginal.
     - Spot is purchase unused capacity at a discount up to 90% and this prices fluctuate.
     - Dedicated is a physical EC2 server which is on prem.
-    
+        - On demand we lloking at:
+            - Flexible workloads
+            - Short-term Applications.
+            - Testing the Application or the Cloud service.
+        - 
