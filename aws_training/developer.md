@@ -58,4 +58,16 @@
         - The is a monitor for your Ec2 instance which is CloudWatch by default.
         - You can also add a bootstrap script in your Ec2 instance.
         - When you want to ssh into your instance you have to run ec2-user@(Ip address) -i and the key pair.
-        - 
+        - in this case we will have to start apache server by running systemctl starthttpd which will start the web server but allow auto on the server we will run systemctl enable httpd.
+        - to check if everything is running, systemctl status httpd
+    - EBS Volumes 
+        - ebs is elastic block store, it is a storage you can attach to an EC2 instances.
+        - you can used for run a database, run OS, store Data and install applications.
+        - Mission critical
+            - production workloads.
+            - Highly available it replicates in a signle availability zone to protect against system failure.
+            - Scable this mean it can is dynmically increase capacity and change the type volume.
+        - EBS Volume types - Solid state disk(SSD)
+            - General purpose SSD (gp2), we run 3 IOPS per GIB, up to maximum of 16 000 IOPS per volume, the gp2 volumes smaller than 1TB can burst up to 3 000 IOPS.
+            - General purpose SSD (gp3), it is the latest generation the base line is 3 000 IOPS for any volume size (1GB - 16TB) they deliver up 16 000 IOPS and they 20% cheaper than gp2.
+            - 
