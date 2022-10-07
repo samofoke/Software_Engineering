@@ -70,4 +70,26 @@
         - EBS Volume types - Solid state disk(SSD)
             - General purpose SSD (gp2), we run 3 IOPS per GIB, up to maximum of 16 000 IOPS per volume, the gp2 volumes smaller than 1TB can burst up to 3 000 IOPS.
             - General purpose SSD (gp3), it is the latest generation the base line is 3 000 IOPS for any volume size (1GB - 16TB) they deliver up 16 000 IOPS and they 20% cheaper than gp2.
-            - 
+            - they both not latency sensitive.
+        - Provisoned IOPS SSD(io1)
+            - is the most expensive option on AWS.
+            - you get 64 000 IOPS per volume 50 IOPS.
+            - This is designed for I/O intensive applications, large databases and lantency-sensitive workloads.
+        - Provisoned IOPS SSD(io2)
+            - lasted generation.
+            - Higher durability and more IOPS.
+            - it is the same price as io1.
+            - you get 500 IOPS per GIB and up to 64 000 IOPS
+            - it is 99.9999% durable.
+        - Provisoned IOPS SSD(io2 Block Express)
+            - SAN(Storage Area Network) in the cloud, highest performance, sub-millisecond latency.
+            - this uses EBS block express architecture.
+            - 4x throughput, IOPS and capacity of regular io2 volumes
+            - up to 64TB, 256,000 IOPS per volume and 99.999% durable.
+            - This is for large, most critical high performance applications like SAP HANA, Oracle, Microsoft SQL Server and IBM DB2.
+        - Throughput Optimized HHD(st1)
+            - low-cost HHD volume.
+            - baseline of 40MB/s per TB and the ability to burst up to 250 MB/s TB
+            - maximum throughput of 500 mb/s per volume.
+            - frequently-accessed throughput intensive workloads.
+
