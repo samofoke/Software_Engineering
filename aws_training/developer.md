@@ -92,4 +92,15 @@
             - baseline of 40MB/s per TB and the ability to burst up to 250 MB/s TB
             - maximum throughput of 500 mb/s per volume.
             - frequently-accessed throughput intensive workloads.
+        - IOPS vs Throughput
+            - IOPS
+                - it measure the number of read and write operation per second.
+                - important metric for quick transactions , low latency apps.
+                - The ability to action read and write very quickly.
+                - option to choose io1 or io2.
+            - Throughput
+                - it measure the number of bits read and write operation per second (MB/s).
+                - important metric of large Datasets, complex queries
+                - The ability to deal with large datasets.
+        - 
 
