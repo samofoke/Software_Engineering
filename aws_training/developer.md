@@ -117,5 +117,8 @@
                 - virtual firewalls from companies such as Fortinet, Palo Alto, Cisco.
             - X-forwarded-for header
                 - The X-Forwarded-For request header is automatically added and helps you identify the IP address of a client when you use an HTTP or HTTPS load balancer. Because load balancers intercept traffic between clients and servers, your server access logs contain only the IP address of the load balancer.
-                - 
-
+                -  504 Error Gateway time out it means the application on the downstream failed to connect.
+            - Route 53 is an Amazon DNS service
+                - The steps to configure Route53.
+                - we will launch an EC2 instance and install httpd and create a application load balancer and finally configure a Route53 and map a domain name to our application load balancer to access the website.
+                
