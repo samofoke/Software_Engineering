@@ -102,5 +102,20 @@
                 - it measure the number of bits read and write operation per second (MB/s).
                 - important metric of large Datasets, complex queries
                 - The ability to deal with large datasets.
-        - 
+        - setup an RDS volume on your EC2 instance
+            - When creating a volume it needs to be in the same availability zone.
+        - Elastic Load Balancer
+            - A load balancer distributes network traffic across a group of serevers.
+            - it allows us to increase traffic if the is alot of workload on the traffic.
+            - Types of Elastic Load Balancer
+                - Application load balancer, HTTP and HTTPS.
+                - Network load balancer, TCP and high performance.
+                - Classic load balancer http/https and tcp.(This is the legacy option)
+            - Gateway Load Balancer
+                - This allows you to load balanc workloads for third-party virtual applications running on AWS.
+                - virtual application purchased using AWS market place.
+                - virtual firewalls from companies such as Fortinet, Palo Alto, Cisco.
+            - X-forwarded-for header
+                - The X-Forwarded-For request header is automatically added and helps you identify the IP address of a client when you use an HTTP or HTTPS load balancer. Because load balancers intercept traffic between clients and servers, your server access logs contain only the IP address of the load balancer.
+                - 
 
