@@ -135,5 +135,38 @@
                     - goup permissions are assigned using IAM policy document.
             - Launching EC2 with S3 roles
                 - We have to create the IAM role and create the EC2 and configure that to access our S3 Bucket.
-                - 
-                
+                - by assigning a role to access an S3 bucket to your EC2 you don't need to create a user and configure a user for AWS configure file in your EC2 instance.
+                - exam tips
+                    - IAM roles are preferred option from a secuirty perspective.
+                    - You should avoid hard coding your credentials in your EC2 instance.
+                    - you can update a policy attached to a role.
+        - Relational Database Service(RDS)
+            -  is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud.
+            - Data is organized into tables
+            - we also have rows and columns.
+            - RDS is normaly used for online transaction processing workloads like Accounts for Customers.(OLTP) adn also Online Analytics processing(OLAP).
+            - RDS types
+                - SQl server
+                - Oracle
+                - MySQL
+                - PostgreSQL
+                - MariaDB
+                - AUrora
+            - RDS can in matters of minutes, this include Multi-AZ, Failover capability and Automated backups.
+            - OLTP and OLAP
+                - OLTP
+                    - This allows us to process data from transactions in real-time, customer, orders and baking trasactions.
+                - OLAP
+                    - This allows us to process complex queries to analyze historical data like net profit figures from the past 3 years or sales forecasting.
+            - Demo for RDS
+                - Launch an RDS instance, launch EC2 instance and install MySQL database
+                - connect the RDS instance using our EC2 instance.
+            - When  creating an RDS service you can't change the VPC.
+            - you can run a script under user data when creating your EC2 instance
+                ~~~
+                #!/bin/bash
+                yum upadte -y
+                yum install mysql -y
+                ~~~
+            - for our EC2 instance to communicate with RDS we will have to configure the Security policy groups for RDS.
+            - 
