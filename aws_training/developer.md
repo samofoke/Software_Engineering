@@ -121,4 +121,19 @@
             - Route 53 is an Amazon DNS service
                 - The steps to configure Route53.
                 - we will launch an EC2 instance and install httpd and create a application load balancer and finally configure a Route53 and map a domain name to our application load balancer to access the website.
+                - IF we want to look at our DNS records w e go to Hosted Zones.
+                - After we done creating our EC2 we have to go and create a load balancer.
+                - if we want to change the name of our domain we have to create a new record in this case we have to create an alias.
+            - We looking at the CLI demo for EC2 instance
+                - we have to ssh ec2-user@ip address -i (name of key pair)
+                - to setup your AWS configure you need an access key of your user from IAM user and a secret key from your user as well to able to access aws features in your cli.
+                - you also have to include a default region which may be us-east-1 or another availability zone.
+                - you can also view your aws configure script by list.
+                - For good practice always remeber for least Privilege which states that give your users the minimum amount of access required to do they job.
+                - use Groups
+                    - create IAM groups and assign your users to groups.
+                    - goup permissions are assigned using IAM policy document.
+            - Launching EC2 with S3 roles
+                - We have to create the IAM role and create the EC2 and configure that to access our S3 Bucket.
+                - 
                 
