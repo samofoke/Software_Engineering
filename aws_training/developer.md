@@ -169,4 +169,18 @@
                 yum install mysql -y
                 ~~~
             - for our EC2 instance to communicate with RDS we will have to configure the Security policy groups for RDS.
-            - 
+            - We going to configure our inbound rules on EC2 Security groups.
+            - Multi-AZ and read Replicas
+                - It an exact copy of your production database in another availability Zone.
+                - In this case we have primary us-east-1a and a standby Database us-east-1b.
+                - In terms of the the solutiion AWS handles everything ffor you.
+                - In this case when you write to your production DB this will automatically synchronize to the standby DB.
+                - Types of RDS can be Multi-AZ
+                    - SQL Server.
+                    - Oracle.
+                    - MySQL.
+                    - PostgreSQL
+                    - MariaDB
+                - RDS failover will go the standby DB if the is a failure with the primary DB.
+                - Multi-AZ is for disaster recovery option.
+                - 
