@@ -183,4 +183,20 @@
                     - MariaDB
                 - RDS failover will go the standby DB if the is a failure with the primary DB.
                 - Multi-AZ is for disaster recovery option.
+                - to improve performance of your RDS is to add read replicas.
+                - it is a read-only copy of your primary database.
+                - A read reeplica can be located in the same availability zone.
+                - it can also be cross AZ or even cross region.
+                - each replica has it's own DNS endpoint they're independent.
+                - they can be promoted to be they own DBs.
+                - key facts about read replicas
+                    - scaling read performance.
+                    - require autyomatic backup.
+                    - multiple read replicas are supported.
+                        - MySQL.
+                        - MariaDB.
+                        - PostgreSQL.
+                        - Orcale.
+                        - SQL Server.
+                - you are allowed to add up to 5 read replicas.
                 - 
