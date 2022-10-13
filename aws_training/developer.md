@@ -199,4 +199,24 @@
                         - Orcale.
                         - SQL Server.
                 - you are allowed to add up to 5 read replicas.
-                - 
+            - RDS backups and snapshots
+                - database snapshots
+                    - manual, user initiated.
+                - aautomated backup
+                    - enabled by default, which creates daily backups.
+                    - point-in time recovery which allows you to recover at any time.
+                    - fully daily backup and the transactions logs are stored as well.
+                    - The recovery process in this case AWS will choose the most recent snapshop.
+                - The automated backups and snapshots are stored in S3.
+                - you get free storage the size of your databse.
+                - storage I/O may be suspended for a few seconds.
+            - restoring an RDS database
+                - The restored version of the database will always be a new RDS instance with a new DNS endpoint.
+            - Encryption on RDS
+                - this can be enable in creation time.
+                - It's also integrated wiht Key mAnagement Service(KMS)
+                - AES-256 encryption.
+                - Include all DB Storage.
+                - Encryption cannot be enabled when an RDS instance has been created.
+                - the only way to encrypt in this case is by using your RDS snapshot.
+                 
