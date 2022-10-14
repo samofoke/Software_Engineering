@@ -219,4 +219,26 @@
                 - Include all DB Storage.
                 - Encryption cannot be enabled when an RDS instance has been created.
                 - the only way to encrypt in this case is by using your RDS snapshot.
-                 
+        - Elasticcache
+            - This is in memory Cache(key vlue)
+            - improves Database performance.
+                - allows you retrive information faster.
+            - great for read-heavy Database workloads
+                - caching the results of I/O intensive database queries.
+            - The 2 types of Elasticcache
+                - memcached, great for basic object caching, scales horizontally but is no Multi-AZ or failover.
+                - good choice for basic caching.
+                - Redis is a more sophisticated solution with enterprise features lik persistence, replication, Multi-AZ and failover.
+                - it supports sorting and ranking data(gaming leaderboards) and complex data types likes lists and hashes.
+                - So in case Elasticache is a good choice if you database is read-heavy and not prone to frequent changes.
+                - also elasticache is not great solution if your Database have heavy write loads.
+                - This also not help with Analytical processing(OLAP queries).
+        - Parameter Store
+            - This allows you to store licence keys, database connection information, username and passwords.
+            - Thsi service under AWs Systsem Manager.
+            - Parameter Store has 2 tiers
+                - Standard
+                - Advance
+            - You can use KMS to encrypt your strings.
+            - you also reference your parameters an example of this will be a bootstrap script.
+            - 
