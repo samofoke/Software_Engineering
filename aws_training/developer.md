@@ -241,4 +241,32 @@
                 - Advance
             - You can use KMS to encrypt your strings.
             - you also reference your parameters an example of this will be a bootstrap script.
-            - 
+            - This service can be used with CloudFormation, Ec2, Lambda, CodeBuild, Codepipeline and CodeDeploy.
+        - quick note
+            -RDS is not suitable for Analytical workloads but we can use RedShift for that.
+- S3 Bucket section for Developer
+    - S3 is an object storage that is secure, highly scable.
+    - It also give you unlimited storage.
+    - objects can range to o bytes to a maximum of 5TB
+    - stores data in buckets.
+    - when the upload is successful you get status 200 HTTP
+    - S3 is key-value store
+        - key as the name of the object.
+        - this is the data itself.
+        - version ID which allows us to store multiple objects.
+        - Metadata which is data about data.
+    - S3 is highly available and highly durable
+        - build for availability.
+        - is designed for durability.
+    - S3 has characteristics
+        - tiered Storage.
+        - Lifecycle Management.
+        - Versioning.
+    - In terms of securing data
+        - server-side encryption.
+            - you can setup defualt encryption on a bucket.
+        - Access control Lists(ACLs)
+            - it define which AWS accounts or groups are granted access or types of access.
+        - Bucket policies
+            - this specify what actions are allowed or denied(PUT, DELETE)
+        -  
