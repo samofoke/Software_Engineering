@@ -268,5 +268,25 @@
         - Access control Lists(ACLs)
             - it define which AWS accounts or groups are granted access or types of access.
         - Bucket policies
-            - this specify what actions are allowed or denied(PUT, DELETE)
-        -  
+            - this specify what actions are allowed or denied(PUT, DELETE).
+        - 
+- Severless
+    - Serverless allows you to run your applicatio code in the cloud without having to worry about managing any servers.
+    - AWS handles
+        - Capaciity provisioning.
+        - paching.
+        - auto scaling.
+        - high availability.
+    - Serverless Technologies on AWS
+        - Lambda.
+        - SQS.
+        - SNS.
+        - API Gateway.
+        - DynamoDB.
+    - Lambda
+        - This is a serverless compute,it allows you to run your code on AWS without provisoning a server .
+        - it takes care of everything including the runtime environment.
+        - The supported the languages, Java, Go, Powershell, Node.js, C#, Python and Ruby.
+        - This service including auto-scaling and high availability.
+        - based on pricing you're charged based on number of requests, their duration, and the amount ofo memory.
+        -    
