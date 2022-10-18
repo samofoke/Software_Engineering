@@ -33,4 +33,260 @@
             - Flexible workloads
             - Short-term Applications.
             - Testing the Application or the Cloud service.
+        - Reserved Instances
+            - Predictable usage, applications with steady state.
+            - specific Capacity requirements applications that require reserved capacity.
+            - Pay up-front this payment reduce thier total computing costs.
+        - Types of reserved instances
+            - standard is up to 72% off demand price.
+            - covertable up to 54% on demand.
+            - Scheduled.
+        - Spot instances
+            - flexible start and end.
+            - low compute.
+            - an urgent need for large compute.
+- EC2 Instance Types
+    - Hardware.
+    - Capabilities different types of compute.
+    - Application requirements 
+    - more infor
+        - General purpose instances provide a balance of compute, memory and networking resources, and can be used for a variety of diverse workloads. 
+        - Compute Optimized instances are ideal for compute bound applications that benefit from high performance processors. 
+        - Memory optimized instances are designed to deliver fast performance for workloads that process large data sets in memory.
+        - Accelerated computing instances use hardware accelerators, or co-processors, to perform functions, such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+        - Storage optimized instances are designed for workloads that require high, sequential read and write access to very large data sets on local storage.
+        - The is a monitor for your Ec2 instance which is CloudWatch by default.
+        - You can also add a bootstrap script in your Ec2 instance.
+        - When you want to ssh into your instance you have to run ec2-user@(Ip address) -i and the key pair.
+        - in this case we will have to start apache server by running systemctl starthttpd which will start the web server but allow auto on the server we will run systemctl enable httpd.
+        - to check if everything is running, systemctl status httpd
+    - EBS Volumes 
+        - ebs is elastic block store, it is a storage you can attach to an EC2 instances.
+        - you can used for run a database, run OS, store Data and install applications.
+        - Mission critical
+            - production workloads.
+            - Highly available it replicates in a signle availability zone to protect against system failure.
+            - Scable this mean it can is dynmically increase capacity and change the type volume.
+        - EBS Volume types - Solid state disk(SSD)
+            - General purpose SSD (gp2), we run 3 IOPS per GIB, up to maximum of 16 000 IOPS per volume, the gp2 volumes smaller than 1TB can burst up to 3 000 IOPS.
+            - General purpose SSD (gp3), it is the latest generation the base line is 3 000 IOPS for any volume size (1GB - 16TB) they deliver up 16 000 IOPS and they 20% cheaper than gp2.
+            - they both not latency sensitive.
+        - Provisoned IOPS SSD(io1)
+            - is the most expensive option on AWS.
+            - you get 64 000 IOPS per volume 50 IOPS.
+            - This is designed for I/O intensive applications, large databases and lantency-sensitive workloads.
+        - Provisoned IOPS SSD(io2)
+            - lasted generation.
+            - Higher durability and more IOPS.
+            - it is the same price as io1.
+            - you get 500 IOPS per GIB and up to 64 000 IOPS
+            - it is 99.9999% durable.
+        - Provisoned IOPS SSD(io2 Block Express)
+            - SAN(Storage Area Network) in the cloud, highest performance, sub-millisecond latency.
+            - this uses EBS block express architecture.
+            - 4x throughput, IOPS and capacity of regular io2 volumes
+            - up to 64TB, 256,000 IOPS per volume and 99.999% durable.
+            - This is for large, most critical high performance applications like SAP HANA, Oracle, Microsoft SQL Server and IBM DB2.
+        - Throughput Optimized HHD(st1)
+            - low-cost HHD volume.
+            - baseline of 40MB/s per TB and the ability to burst up to 250 MB/s TB
+            - maximum throughput of 500 mb/s per volume.
+            - frequently-accessed throughput intensive workloads.
+        - IOPS vs Throughput
+            - IOPS
+                - it measure the number of read and write operation per second.
+                - important metric for quick transactions , low latency apps.
+                - The ability to action read and write very quickly.
+                - option to choose io1 or io2.
+            - Throughput
+                - it measure the number of bits read and write operation per second (MB/s).
+                - important metric of large Datasets, complex queries
+                - The ability to deal with large datasets.
+        - setup an RDS volume on your EC2 instance
+            - When creating a volume it needs to be in the same availability zone.
+        - Elastic Load Balancer
+            - A load balancer distributes network traffic across a group of serevers.
+            - it allows us to increase traffic if the is alot of workload on the traffic.
+            - Types of Elastic Load Balancer
+                - Application load balancer, HTTP and HTTPS.
+                - Network load balancer, TCP and high performance.
+                - Classic load balancer http/https and tcp.(This is the legacy option)
+            - Gateway Load Balancer
+                - This allows you to load balanc workloads for third-party virtual applications running on AWS.
+                - virtual application purchased using AWS market place.
+                - virtual firewalls from companies such as Fortinet, Palo Alto, Cisco.
+            - X-forwarded-for header
+                - The X-Forwarded-For request header is automatically added and helps you identify the IP address of a client when you use an HTTP or HTTPS load balancer. Because load balancers intercept traffic between clients and servers, your server access logs contain only the IP address of the load balancer.
+                -  504 Error Gateway time out it means the application on the downstream failed to connect.
+            - Route 53 is an Amazon DNS service
+                - The steps to configure Route53.
+                - we will launch an EC2 instance and install httpd and create a application load balancer and finally configure a Route53 and map a domain name to our application load balancer to access the website.
+                - IF we want to look at our DNS records w e go to Hosted Zones.
+                - After we done creating our EC2 we have to go and create a load balancer.
+                - if we want to change the name of our domain we have to create a new record in this case we have to create an alias.
+            - We looking at the CLI demo for EC2 instance
+                - we have to ssh ec2-user@ip address -i (name of key pair)
+                - to setup your AWS configure you need an access key of your user from IAM user and a secret key from your user as well to able to access aws features in your cli.
+                - you also have to include a default region which may be us-east-1 or another availability zone.
+                - you can also view your aws configure script by list.
+                - For good practice always remeber for least Privilege which states that give your users the minimum amount of access required to do they job.
+                - use Groups
+                    - create IAM groups and assign your users to groups.
+                    - goup permissions are assigned using IAM policy document.
+            - Launching EC2 with S3 roles
+                - We have to create the IAM role and create the EC2 and configure that to access our S3 Bucket.
+                - by assigning a role to access an S3 bucket to your EC2 you don't need to create a user and configure a user for AWS configure file in your EC2 instance.
+                - exam tips
+                    - IAM roles are preferred option from a secuirty perspective.
+                    - You should avoid hard coding your credentials in your EC2 instance.
+                    - you can update a policy attached to a role.
+        - Relational Database Service(RDS)
+            -  is a web service that makes it easier to set up, operate, and scale a relational database in the AWS Cloud.
+            - Data is organized into tables
+            - we also have rows and columns.
+            - RDS is normaly used for online transaction processing workloads like Accounts for Customers.(OLTP) adn also Online Analytics processing(OLAP).
+            - RDS types
+                - SQl server
+                - Oracle
+                - MySQL
+                - PostgreSQL
+                - MariaDB
+                - AUrora
+            - RDS can in matters of minutes, this include Multi-AZ, Failover capability and Automated backups.
+            - OLTP and OLAP
+                - OLTP
+                    - This allows us to process data from transactions in real-time, customer, orders and baking trasactions.
+                - OLAP
+                    - This allows us to process complex queries to analyze historical data like net profit figures from the past 3 years or sales forecasting.
+            - Demo for RDS
+                - Launch an RDS instance, launch EC2 instance and install MySQL database
+                - connect the RDS instance using our EC2 instance.
+            - When  creating an RDS service you can't change the VPC.
+            - you can run a script under user data when creating your EC2 instance
+                ~~~
+                #!/bin/bash
+                yum upadte -y
+                yum install mysql -y
+                ~~~
+            - for our EC2 instance to communicate with RDS we will have to configure the Security policy groups for RDS.
+            - We going to configure our inbound rules on EC2 Security groups.
+            - Multi-AZ and read Replicas
+                - It an exact copy of your production database in another availability Zone.
+                - In this case we have primary us-east-1a and a standby Database us-east-1b.
+                - In terms of the the solutiion AWS handles everything ffor you.
+                - In this case when you write to your production DB this will automatically synchronize to the standby DB.
+                - Types of RDS can be Multi-AZ
+                    - SQL Server.
+                    - Oracle.
+                    - MySQL.
+                    - PostgreSQL
+                    - MariaDB
+                - RDS failover will go the standby DB if the is a failure with the primary DB.
+                - Multi-AZ is for disaster recovery option.
+                - to improve performance of your RDS is to add read replicas.
+                - it is a read-only copy of your primary database.
+                - A read reeplica can be located in the same availability zone.
+                - it can also be cross AZ or even cross region.
+                - each replica has it's own DNS endpoint they're independent.
+                - they can be promoted to be they own DBs.
+                - key facts about read replicas
+                    - scaling read performance.
+                    - require autyomatic backup.
+                    - multiple read replicas are supported.
+                        - MySQL.
+                        - MariaDB.
+                        - PostgreSQL.
+                        - Orcale.
+                        - SQL Server.
+                - you are allowed to add up to 5 read replicas.
+            - RDS backups and snapshots
+                - database snapshots
+                    - manual, user initiated.
+                - aautomated backup
+                    - enabled by default, which creates daily backups.
+                    - point-in time recovery which allows you to recover at any time.
+                    - fully daily backup and the transactions logs are stored as well.
+                    - The recovery process in this case AWS will choose the most recent snapshop.
+                - The automated backups and snapshots are stored in S3.
+                - you get free storage the size of your databse.
+                - storage I/O may be suspended for a few seconds.
+            - restoring an RDS database
+                - The restored version of the database will always be a new RDS instance with a new DNS endpoint.
+            - Encryption on RDS
+                - this can be enable in creation time.
+                - It's also integrated wiht Key mAnagement Service(KMS)
+                - AES-256 encryption.
+                - Include all DB Storage.
+                - Encryption cannot be enabled when an RDS instance has been created.
+                - the only way to encrypt in this case is by using your RDS snapshot.
+        - Elasticcache
+            - This is in memory Cache(key vlue)
+            - improves Database performance.
+                - allows you retrive information faster.
+            - great for read-heavy Database workloads
+                - caching the results of I/O intensive database queries.
+            - The 2 types of Elasticcache
+                - memcached, great for basic object caching, scales horizontally but is no Multi-AZ or failover.
+                - good choice for basic caching.
+                - Redis is a more sophisticated solution with enterprise features lik persistence, replication, Multi-AZ and failover.
+                - it supports sorting and ranking data(gaming leaderboards) and complex data types likes lists and hashes.
+                - So in case Elasticache is a good choice if you database is read-heavy and not prone to frequent changes.
+                - also elasticache is not great solution if your Database have heavy write loads.
+                - This also not help with Analytical processing(OLAP queries).
+        - Parameter Store
+            - This allows you to store licence keys, database connection information, username and passwords.
+            - Thsi service under AWs Systsem Manager.
+            - Parameter Store has 2 tiers
+                - Standard
+                - Advance
+            - You can use KMS to encrypt your strings.
+            - you also reference your parameters an example of this will be a bootstrap script.
+            - This service can be used with CloudFormation, Ec2, Lambda, CodeBuild, Codepipeline and CodeDeploy.
+        - quick note
+            -RDS is not suitable for Analytical workloads but we can use RedShift for that.
+- S3 Bucket section for Developer
+    - S3 is an object storage that is secure, highly scable.
+    - It also give you unlimited storage.
+    - objects can range to o bytes to a maximum of 5TB
+    - stores data in buckets.
+    - when the upload is successful you get status 200 HTTP
+    - S3 is key-value store
+        - key as the name of the object.
+        - this is the data itself.
+        - version ID which allows us to store multiple objects.
+        - Metadata which is data about data.
+    - S3 is highly available and highly durable
+        - build for availability.
+        - is designed for durability.
+    - S3 has characteristics
+        - tiered Storage.
+        - Lifecycle Management.
+        - Versioning.
+    - In terms of securing data
+        - server-side encryption.
+            - you can setup defualt encryption on a bucket.
+        - Access control Lists(ACLs)
+            - it define which AWS accounts or groups are granted access or types of access.
+        - Bucket policies
+            - this specify what actions are allowed or denied(PUT, DELETE).
         - 
+- Severless
+    - Serverless allows you to run your applicatio code in the cloud without having to worry about managing any servers.
+    - AWS handles
+        - Capaciity provisioning.
+        - paching.
+        - auto scaling.
+        - high availability.
+    - Serverless Technologies on AWS
+        - Lambda.
+        - SQS.
+        - SNS.
+        - API Gateway.
+        - DynamoDB.
+    - Lambda
+        - This is a serverless compute,it allows you to run your code on AWS without provisoning a server .
+        - it takes care of everything including the runtime environment.
+        - The supported the languages, Java, Go, Powershell, Node.js, C#, Python and Ruby.
+        - This service including auto-scaling and high availability.
+        - based on pricing you're charged based on number of requests, their duration, and the amount ofo memory.
+        -    
