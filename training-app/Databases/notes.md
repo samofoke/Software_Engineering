@@ -16,4 +16,12 @@
         - unambiguous.
     - Data governance
         - It is used to describe a strategy or mathodology defined by an organition to safeguard data quality.(MDM) Master Data management is a governance strategy that provides technological foundation for implementation strategy.
+- Database
+    - is shared integrated computer structure that stores collection
+        - end-user-data
+        - metadata, or data about data which ens user data is integrated.
+- Database Management System(DBMS)
+    - is a collection of programs that manages the database structure and controls access to data.
+    - Roles and advantages of the DBMS
+        - the BDMS enables the data in the database to be shared among multiple applications.
         - 
