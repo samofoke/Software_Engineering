@@ -289,4 +289,12 @@
         - The supported the languages, Java, Go, Powershell, Node.js, C#, Python and Ruby.
         - This service including auto-scaling and high availability.
         - based on pricing you're charged based on number of requests, their duration, and the amount ofo memory.
-        -    
+        - The first 1 million requests per month are free.
+        - duration, you're charged millisecond increments and the price depends on the memory you allocate.
+        - price per GB-second 0.5GB x 0.1s = 0.5 GB-second.
+        - you also get 400 000 GB-second per month from AWS.
+        - Lambda is event-driven Architecture
+            - this means they can be automatically trigged by other AWS services.
+            - it is trigged by events, S3 or DynamoDB table changes.
+            - it can be trigged by user request, this can be API Gateway config for HTTP.
+            - 

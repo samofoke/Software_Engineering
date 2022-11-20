@@ -68,7 +68,78 @@
         * exit
         * ssh -i "sshkey.pem" awsUser@ec2-54-235-62-167.compute-1.amazonaws.com
     * Understanding CodeCommit in terms of the Dev Team
-        *  
+        * 
+## Notes for AWS 
+- Advantages of Cloud computing
+  - go global in munites.
+  - stop spending money in running and maintaining data centers.
+  - benefit from economies of scale.
+  - increase speed and agility .
+  - stop guessing capacity.
+  - trade capital expenses for variable expense.
+- benefits of cloud computing
+  - high availability.
+  - elasticity.
+  - Agility.
+  - Durability.
+- Cloud Computing models
+  - Infrastructure as a Service (IaaS).
+  - Software as a Service (SaaS).
+  - Platform as a Service (PaaS).
+- Cloud Deployment models
+  - Private Cloud.
+  - Public Cloud.
+  - Hybrid Cloud.
+- Global Infrastructure
+  - Regions
+    - it is a physical locations.
+    - characteristics
+      - fully independent and isolated.
+      - resource and serivice specific.
+  - Availability Zones
+    - it is one or more physically separated data centers.
+    - with redundant power, networking, and connectiivity.
+  - Edge locations
+    - cache content for fast deleivery content to your users (CDN).
+    - they reduce latency.
+- Technologies
+  - Compute services
+    - EC2.
+    - Lambda.
+    - Fargate.
+    - Lightsail.
+    - Outpots.
+    - Batch.
+  - Storage
+    - S3.
+    - EBS.
+    - EFS.
+    - Storage Gateway.
+    - Backup.
+  - Content delivery
+    - CloudFront.
+    - GLobal accelerator.
+    - S3 Transfer acceleration.
+  - Networking
+    - Route 53.
+    - Virtual Private Cloud (VPC).
+    - Direct Connect.
+    - Virtual Private Nnetwork (VPN).
+    - API Gateway.
+  - Databases
+    - Relational Database Service (RDS).
+    - Aurora.
+    - DynamoDB.
+    - DocumentDB.
+    - ElasticCache.
+  - Magration and Transfer
+    - Database Migration Service (DMS).
+    - Server Migration Service (SMS).
+    - Snow Family.
+    - DataSync
+
+
+
 
 
 
