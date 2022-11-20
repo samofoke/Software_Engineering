@@ -75,9 +75,7 @@ function factorial_compute(x) {
         return x * factorial_compute(x - 1);
     }
 }
-
 console.log("The factorial is: ",factorial_compute(4));
-
 
 
 
