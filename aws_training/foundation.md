@@ -137,6 +137,14 @@
     - Server Migration Service (SMS).
     - Snow Family.
     - DataSync
+- Elastic Compute Cloud (EC2)
+  - it allows to rent and manage virtual servers in the cloud.
+  - A single Region contains multiple AZs.
+  - A single AZ contains multiple Data centers.
+  - A single Data center contains multiple servers.
+- AWS Lambda
+  - is serverless Compute service that lets you run code without managing servesrs
+  - 
 
 
 
