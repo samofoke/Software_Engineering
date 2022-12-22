@@ -271,7 +271,7 @@
             - this specify what actions are allowed or denied(PUT, DELETE).
         - 
 - Severless
-    - Serverless allows you to run your applicatio code in the cloud without having to worry about managing any servers.
+    - Serverless allows you to run your application code in the cloud without having to worry about managing any servers.
     - AWS handles
         - Capaciity provisioning.
         - paching.

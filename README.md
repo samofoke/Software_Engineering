@@ -78,3 +78,16 @@
      myObject.passward = "shwrw2435%#$";
      This properties will be added to myObject
     ```
+### Looking into React
+- React Concepts
+  - Imperative approach allowed us to change things individually.
+  - Declarative approach is concpet of building in a state concept.
+  - It's fundamentally important to understand rebdering and re-rendering in React.
+  - with class components we specifically put our render method inside our class.
+  - setState allows you to update the state.
+  - passing state as objects but not us functions which is not a good practice.
+  - You can pass a function as well as callback in React when it comes to uppdating the state.
+  - The callback allows you to double check your setState if did change the state and it will run the setState function has taking effect.
+  - This method is Ideal if you using Class Components in React.
+  - Templates allows us to inject HTMl using JavaScript.
+  - A placeholder will look like this ${objt.name}
