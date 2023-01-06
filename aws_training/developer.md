@@ -288,13 +288,105 @@
         - it takes care of everything including the runtime environment.
         - The supported the languages, Java, Go, Powershell, Node.js, C#, Python and Ruby.
         - This service including auto-scaling and high availability.
-        - based on pricing you're charged based on number of requests, their duration, and the amount ofo memory.
+        - based on pricing you're charged based on number of requests, their duration, and the amount of memory.
         - The first 1 million requests per month are free.
         - duration, you're charged millisecond increments and the price depends on the memory you allocate.
         - price per GB-second 0.5GB x 0.1s = 0.5 GB-second.
-        - you also get 400 000 GB-second per month from AWS.
+        - you also get 400 000 GB-second per month from AWS for free.
         - Lambda is event-driven Architecture
             - this means they can be automatically trigged by other AWS services.
             - it is trigged by events, S3 or DynamoDB table changes.
-            - it can be trigged by user request, this can be API Gateway config for HTTP.
-            - 
+            - it can be trigged by user request, this can be API Gateway config for HTTP endpoint.
+        - Services that can trigger or invoke Lambda functions.
+            - DynamoDB.
+            - Kinesis.
+            - SQS.
+            - Aplication Load Balancer.
+            - API Gateway.
+            - Axela.
+            - CouldFront.
+            - S3.
+            - SNS.
+            - SES.
+            - couldFormation.
+            - CloudWatch.
+            - CodeCommit.
+            - CodePipeline.
+    - API Gateway
+        - Application programming interface and it is used to interact with other web applications.
+        - This application allows you to publish, maintain, monitor and secure APIs at any scale.
+        - Supported APIs
+            - Restful APIs - severless workloads, stateless.
+            - Websocket APIs - chat apps.
+        - API Gateway can offer it's to Lambda, EC2 and DynamoDB.
+    - Lambda versions
+        - multiple versions can be created with different aliases.
+        - $LATEST, we use arn:aws to track versions with Lambda.
+    - to create versions you have to update one with $LASTED.
+    - after creating a version we going to need to create an alias.
+    - once a version is created the will update automatically with just publishing the new version.
+    - but aliases need to be created manually.
+    - lambda concurrent execution limit.
+    - Lambda and VPCs
+        - In some cases you will need to require to access resourcs in a private vpc, it can be read, write or RDS database access.
+        - or shutdown EC2 insrtances.
+        - the lambda function can be configured under advance settings for vpc options.
+    - Step Functions
+        - this privides a visual interface for serverless applications.
+            - sequential workflows.
+            - parallel workflows.
+            - branching workflows.
+        - you can log all your steps.
+        - Standard Woorkflows
+            - Long running up for a year.
+            - at most once model, tasks are never excuted more than once.
+            - non idempotent actions, when processing payments.
+            - change in state.
+        - Express Workflows
+            - short-lived.
+            - at least once.
+            - idempotent.
+            - identical request.
+        - 2 Types of Express workflows
+            - Synchronous express workflow.
+                - begins a workflow and waits for it to complete.
+            - Asynchronous express workflow.
+                - begins a workflow and confirms the workflow and you can just check the logs on CloudWatch.
+    - X-Ray
+        - is a tool which helps developers analyze and debug distributed applications.
+        - allwing you to toubleshoot the root cuase of performance issues and erros.
+        - Analyze and debug
+            - analyze and debug distributed applications.
+        - Service map
+            - visual presentation of applications.
+        - X-Ray Agent and X-Ray SDK
+            - it's agent/daemon that must be installed on your EC2 instance or use SDK to instrument your application to send traces to X-Ray.
+        - X-Ray integrations
+            - EC2.
+            - Elastic Container Service (ECS).
+            - Lambda.
+            - Elastic Beanstalk.
+            - SNS.
+            - SQS.
+            - DynomoDB
+            - Elastic Load Balancer.
+            - API Gateway.
+        - X-Ray high level configuration ststeps
+            - you need X-Ray SDK.
+            - X-Ray daemon.
+        - Annotations & Indexing
+            - annotations.
+            - key-value pairs.
+    - Advance API Gateway.
+        - import API with a definition files.
+        - OpenAPI known as swagger
+        - SOAP legacy protocols which returns a response in XML.
+    - API Gateway caching & throttling
+        - they are designed to improve performance with latency.
+        - throttling help with reducing and manaing requst from your API.
+- DynamoDb
+    - 
+
+    
+        
+
