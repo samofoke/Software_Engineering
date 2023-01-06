@@ -91,3 +91,4 @@
   - This method is Ideal if you using Class Components in React.
   - Templates allows us to inject HTMl using JavaScript.
   - A placeholder will look like this ${objt.name}
+  - looking into props, an example will be onChange, type className.
