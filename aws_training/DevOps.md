@@ -1,0 +1,45 @@
+## AWS Certified DevOps Engineer
+
+- Courses needed to have a solid foundation for the DevOps exam
+    - CloudFormation Deep dive.
+    - Using DevOps Automation for AWS Deployments.
+    - Applying Infrastructure as code.
+    - Configuring and monitoring Governance of AWS.
+    - Designing High Availabilability, Fault Tolerance, and Disaster recovery.
+    - AWS Certified DevOPs Professional Exam prep course.
+
+- SDLC Automation
+    - CI/CD Concepts
+        -
+    - We trying to solve the concept of delivery.
+    - DevOps shares a lot with Agile princeples.
+    - Dev is about how many changes can we push to production.
+    - Ops is anbout having stable and available Systems.
+    - Dev -> QA -> Operations
+    - this can be archieved with Automation.
+    - Continous Delivery (CD) or Continous Deployment (CD) is not the same.
+    - We can have source code -> test -> build -> QA -> release
+    - Continous Integration 
+        - source code.
+        - test.
+        - build.
+    - Continous Delivery
+        - build.
+        - QA.
+    - Continous Deployment
+        - build.
+        - QA.
+        - release.
+    - Developer Tools for AWS
+        - CodeCommit.
+        - CodeBuild.
+        - CodeDeploy.
+        - CodePipeline.
+    - CodeCommit
+        - it is a managed service that host git repositories that are private.
+        - it is highly available, scalable and fault tolerent.
+        - no size limit.
+        - it integrates with other AWS services like Codebuild, CodeDeploy, CodePipeline, lambda and SNS.
+        - it works with existing git based tools.
+        - We can use S3, GitHub, Bitbucket, and Github Enterprise.
+        
