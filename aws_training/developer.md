@@ -383,10 +383,218 @@
         - SOAP legacy protocols which returns a response in XML.
     - API Gateway caching & throttling
         - they are designed to improve performance with latency.
+        - TTL (time to live) they're cached for this time period, the default TTL is 3000 seconds(5 minutes).
+        - Reduce the number of API calls.
         - throttling help with reducing and manaing requst from your API.
+        - defualt limts 10000 rps and 5000 concurrent requests.
+        - you can import APIs using definition files like OPenAPI known as swagger.
 - DynamoDb
+    - This is a no SQL Database, it is fast and flexible, consistent, single digit millisecond latency at any scale.
+    - fully managed, it supports key-value data models, also doument format such as JSON, HTML and XML.
+    - Use case, is great fit for mobile, web, gaming, ad tech and Iot.
+    - it is serverless which means it integrates well with Lambda.
+    - storage is SSD.
+    - eventually consistent reads.
+    - Strongly consistent reads.
+    - ACID transactions 
+    - Primary key
+        - partition key is input to an internal hash function or a physical location which the data is stored.
+        - composite key is both partition key plus sort key(a timestap for a pos for example).
+    - DynamoDB Access Control
+        - We use IAM for permission access for DynamoDB to make make sure we can add condition which we add an IAM policy to restrict user for accessing other users data.
+        - IAM dynamodb:leadingKeys which allows only the items where partion key-value maches their User_ID.
+    - DynamoDB Indexing
+        - querying in dynamodb on non-primary key and using global secondary indexes and local secondary indexes.
+    - query finds items in a table
+    - results sort key always sort in aascending order.
+    - reverse set ScanIndexForward this reverse your order of your query and is not used for scans only quaries.
+    - a query is more efficient than a scan.
+    - DynamoDB API calls
+        - create-table.
+        - put-item.
+        - get-item.
+        - update-table.
+        - list-table.
+        - describe-table.
+        - scan.
+        - query.
+        - delete-item.
+        - delete-table.
+    - IAM permissions are needed to make API calls.
+    - DynamoDB Provisioned Throughput
+        - when you write your table, you can specify you requirements.
+        - calculating strongly read capacity 3KB/4KB = 0.75 0.75KB~ 1KB * 80 = 80.
+        - for eventually consistence read you will divide 80/ 2 = 40 for eventually consistence reads.
+        - write capacity each size item is 1KB 512 bytes / 1024 bytes = 0,5~ 1KB.
+        - 1KB * 100 = 100 capacity unit.
+    - DynamoDB on-demand Capacity Model
+        - charges apply for reading, writing and sorting data.
+        - DynamoDB instantly scales up and down.
+        - we use this for unknown workloads.
+        - spiky, short-lived peaks. a pay-per use model is desired
+    - DynamoDB Accelerator (DAX)
+        - it's a fully managed cluster in memory cache for DynamoDB
+        - This allow to cache read permissions so it will quey Dax first in terms of reading the cached read on the table.
+        - So Dax is not a benefit for very intensive read and write applications.
+    - DynaoDB Time To Live (TTL)
+        - this is for expiry time for data and it's great for remove irrelevent/old data and this reduces costs as well.
+        - we use epoch time to estemate how much time it left to remove old data.
+    - DynamoDB Streams
+        - This ca be used for auditing and as trigger in terms of monitoring events on your DynamoDB table and is good for Serverless services such as Lambda.
+        - time ordered sequence.
+        - logs.
+        - by default primary key is recorded.
+        - it replicates the data and it doesn't store it for long.
+    - Provisioned throughput exceeded
+        - your request rate is too high for read/write capacity.
+        - The AWS SDK will run the request until sucessful.
+        - if you dont use the SDK, you can use the exponational backoff to reduce the frequency of requests.
+        - exponational backoff
+            - this improves flow by retrying requsts using progressively longer waists.
+-  Key Management Service (KMS)
+    - This allows you to manage all your enrypted keys in AWS.
+    - you use it when dealing with sensitive information.
+    - KMS integrates
+        - S3.
+        - RDS.
+        - DynamoDB.
+        - Lambda.
+        - EBS.
+        - EFS.
+        - CloudTrail.
+        - Developer Tools.
+    - Customer Master Key (CMK)
+        - Is used to Generate / Encrypt / decrypt the data key and the data key is used to encrypt / decrypt yor data and it can do this up to 4KB.
+        - known as Envelope Encrypt.
+        - to setup CMK
+            - Set uo CMK, Alias -> Description -> Key material.
+            - key Administration permissions, USers -> Roles -> admin permissions.
+            - Key usage permissions, users -> roles.
+    - KMS API Calls
+        - kms encrypt.
+        - kms decrypt.
+        - kms re-encrypt.
+        - kms enable-key-rotation.
+        - kms generate-data-key > 4KB.
+    - Envolope Encryption
+        - it encrypts files that are larger than 4KB.
+        - we can aslo decrypt as well.
+        - we use this because the encryption goes through Network and also for performance.
+    - KMS Components
+        - AWS-managed CMK.
+        - Customer-managed CMK.
+        - Data key, known as envolope encryption.
+- Simple Queue Service (SQS)
+    - it is a message queue serivice.
+    - This nables web service applications to queue messages.
+    - a way of assigning jobs in a form of messages.
+    - The visibility timeout takes place when the process is running.
+    - SQS features
+        - Decouple application Components
+        - Store messages.
+        - retrieve Messages.
+    - SQS acts as a buffer between  the component receiving the data processing and producing / saving the data.
+    - Resolves scheduling issues
+    - SQS Key facts
+        - Pull-based
+        - text data.
+        - 256 KB messages in size.
+        - messages will be processed at least once.
+        - messages can be kept on the queue for 1 minute to 14 days.
+        - defualt retention is 4 days.
+    - SQS types
+        - standard queues are the default which provide best-effort ordering.
+            - unlimited transactions.
+            - best effort ordering.
+        - FIFO (first in first out).
+            - exactly once processing
+            - no duplicates.
+            - 300 tps limit.
+            - great option for banks.
+    - SQS Settings
+        - visibility timeout
+            - it is the amount of time the message is invisible in the SQS queue after a redaer picks up that message.
+            - by default is 30 seconds.
+            - we can change the visibility which is 12 hours.
+            - short polling and long pulling.
+    - SQS delay queues
+        - postpone delivery of new messages
+        - we use this for large distributed applications
+        - delay for a fiew seconds.
+        - We use S3 for large SQS messages 256KB up to 2GB.
+        - We need AWS SDK for java, SQS extended client library for java and S3 bucket.
+        - We can't use AWS CLI, AWS Management console, SQS API and any other AWS SDK.
+- Simple Notification Service (SNS)
+    - A web service that makes it easy to set up, operate and send notifications from the Cloud.
+    - it supports sms, SQS, HTTP and email.
+    - It's a push notification only.
+    - it uses publish and subscribe model so the customer needs to subcribe.
+    - it can fanout mssages to a large number of Users, to multiple of SQS queues, HTTP endpoints and emails.
+- Simple Email Service
+    - it is a an email only service.
+    - this can be use for incoming and outgoing emails.
+    - it is not subcribe based, you just need he email.
+
+- Kinesis
+    - We have Kinesis streams which captures streaming of videos and data in real time and applications that process and analyse data in real time.
+    - Kinesis Data FireHose capture, transform and load data continuously into AWS data stores for example DataDogs, Splunk or using BI applications and tools that can be real time analysis for stored data.
+    - Kinesis Data Analytics
+        - a real time analytics using standard SQL on data received by Kinesis Data Streams and Kinesis Data Firehose, processing data in AWS data store, S3, Redshift, Elasticsearch.
+    - Kinesis streams are made up of shards
+        - each shard it's a sequence of or more data records and provides a fixed unit of Capacity.
+        - Consuming keinesis the number of consumer instances shuold not exceed the number  of shards (except for failover purposes).
+        - Will need to use auto-scaling group and drive scaling actions for your EC2 consumer instances based on the CPU utilization.
+- Elastic beanstalk
+    - deploys ans scales your web applications, including web application server platform.
+    - languages supported is Java, PHP, Python, GO, .NET, Node.js.
+    - managed platforms like Apache Tomcat, Docker.
+    - it also provisions AWS resources like:
+        - EC2.
+        - RDS.
+        - S3.
+        - Elastic Load Balancer.
+        - Auto Scaling Groups.
+    - System Admin , managing OS and applications server updates, monitoring, metrics and health checks.
+    - it can also can fully manage your EC2 onstances for you or you can take full administraive control.
+    - You can Customize your Elastic Beanstalk.
+        - env with .ebextensions folder located in top-level directory and the files must have .config this is for AMAzong linux1.
+        - for Amazon linux2 we can use a build file in the root directory of your application like shell scripts.
+        - we can create procfile for long-ryunning process like custom commands.
+        - platform hooks for custom scripts that run various stages when the EC2 instance are provisioned
+            - .platform / hooks / prebuild / predeploy / postdeploy.
+    - Windows Application Migration Assistant for Elastic Beanstalk
+        - it's formerly known as .NET Migration Assistant
+        - open source, interactive Powershell migrating windows resource to elastic beanstalk
+    - Elastic beanstalk deployment types
+        - all at once.
+        - rolling update deployed in baches.
+        - rolling with additional batch, maintains full capacity.
+        - immutable maintains full capacity and to roll back you just delete the new instance.
+        - Traffic splitting which performs an immutable deployment the splits the triffc between the old and the new deployment.
+    - Deploying with RDS with Elastic beanstalk
+- Developer Tools
+    - CodeCommit
+        - source and version control.
+        - this service allows Devs to collaborate on projeects.
+    - CodeBuild
+        - Automated builds.
+        - compiles source code.
+    - CodeDeploy
+        - automated deployment.
+        - we use it to automate code deployment to EC2 instances, lambda and on-premises systems.
+    - CodePipeline
+        - manages the workflow
+        - end to end solution, allowing you to build, test, and deploy your application everytime the is a code change.
+    - CI/CD
+        - integrating or merging the code changes triggerd by CodeCommit.
+        - automating builds for CD trigrred by CodeBuild and CodeDeploy.
+        - continuous Deployment fully automating release process so this is part of Codepipeline.
+    - CodeArtifact
+        - it is a repository that makes it easy for developers to find software packages
+        - packges which are needed for developemnt and they're approved and we can create an upstream repo with external connections to pull packages npm for example.
     - 
 
-    
+
         
+
 
