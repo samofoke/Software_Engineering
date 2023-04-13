@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latita project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#"><img class="logo-pic" src="./assets/Latita-logo.svg" alt="Logo"></a>
+            </div>
+            <ul class="links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">what we believe</a></li>
+                <li><a href="#">what we do</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+
+        <div class="dropdown-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">what we believe</a></li>
+            <li><a href="#">what we do</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#" class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="slide-wrapper">
+          <div class="slide">
+            <img id="slide-1" src="./assets/87cd149dc596bf4154590e2a7a7ae250.jpg" alt="Carousel Image 1">
+            <img id="slide-2" src="./assets/architecture-ge6f979499_640.jpg" alt="Carousel Image 2">
+            <img id="slide-3" src="./assets/buildings-ga6a78aefb_640.jpg" alt="Carousel Image 3">
+            <img id="slide-4" src="./assets/buildings-gbc3a9c8aa_640.jpg" alt="Carousel Image 4">
+        </div>
+        <div class="navbar-slider">
+            <a href="#slide-1"></a>
+            <a href="#slide-2"></a>
+            <a href="#slide-3"></a>
+            <a href="#slide-4"></a>
+        </div>
+      </section>
+      
+    <footer>
+        <div class="align-footer">
+            <p>&copy; 2023 My Website. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const toggleButton = document.querySelector('.toggle_btn')
+        const toggleButtonIcon = document.querySelector('.toggle_btn i')
+        const dropMenu = document.querySelector('.dropdown-menu')
+
+        toggleButton.onclick = function () {
+            dropMenu.classList.toggle('open');
+            const isOpen = dropMenu.classList.contains('open')
+
+            toggleButtonIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>

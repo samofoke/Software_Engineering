@@ -9,8 +9,10 @@ const SelectionSort = (arr) => {
         for (let x = i + 1; x < arr.length; x++) {
             if (arr[x] < arr[lowNum]) {
                 lowNum = x;
+                console.log("The nth element to swap with: ", lowNum);
             }
         }
+        //This function allows me to swap n elements.
         if (lowNum != i) {
             let temp = arr[i];
             arr[i] = arr[lowNum];
@@ -20,4 +22,10 @@ const SelectionSort = (arr) => {
     return arr;
 }
 
+const startTime = Date.now();
+
 console.log(SelectionSort(arr));
+
+const endTime = Date.now();
+
+console.log(`it took: ${endTime - startTime} ms`);
