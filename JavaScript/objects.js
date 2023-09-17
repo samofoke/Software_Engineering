@@ -64,14 +64,41 @@ console.log(d);
 let objt01 = Object.create({x: 1, y: 2});
 console.log(objt01.x, objt01.y);
 
+/* Querying and setting properties
+ * in this topic we have objects as associative arrays.
+ * Looking at inheritance in JavaScript.
+ * The fact that inheritance occurs when querying properties but no when
+ * setting them is a key feature in JavaScript because it allows us to 
+ * seletively override inherted properties.
+ * The delete operator only deletes it's own properties, not inheried ones.
+ */
 
+let unitCircle = { r: 1 };
+let c = Object.create(unitCircle);
 
+c.x = 1; c.y = 1;
 
+c.r = 2;
 
+unitCircle.r 
+console.log(unitCircle.r);
 
+//an example of the delete operator
 
+let sampl = { x: 1 }
+delete sampl.x
+console.log(sampl)
 
+/* Testing properties in JavaScript
+ * objects can be thought as sets of properties and it's useful to always
+ * test for membership in the set.
+ * this allows us to valided if a property exists in an object.
+ */
 
+let sa01 = { x: 1 }
+
+sa01.propertyIsEnumerable("x")
+console.log(sa01)
 
 
 
