@@ -50,8 +50,10 @@ function memoize(f) {
     return function(...args) {
         let key = args.length + args.join("+");
         if (cache.has(key)) {
+            console.log(`Fetching from cached ${args} and ${cache.has(key)}`);
             return cache.get(key);
         } else {
+            console.log(`calculating for ${args}`);
             let result = f.apply(this, args);
             cache.set(key, result);
             return result;
