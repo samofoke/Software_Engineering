@@ -41,3 +41,37 @@ console.log("n :", n.size);
 console.log("new: ", n);
 console.log("copy: ", copy);
 console.log("p: ", p);
+
+// using typed arrays
+// once you have created a typed array, you can read and write it's elements.
+
+const LargestPrimeSmaller = (n) => {
+  let a = new Uint8Array(n + 1);
+
+  let max = Math.floor(Math.sqrt(n));
+
+  let p = 2;
+
+  while (p <= max) {
+    for (let i = 2 * p; i <= n; i += p) {
+      a[i] = 1;
+    }
+    while (a[++p]) {}
+  }
+  while (a[n]) {
+    n--;
+  }
+  return n;
+};
+
+console.log("prime: ", LargestPrimeSmaller(120));
+
+// Typed arrays are not true arrays, but they emplement most array method.
+// typed arrays have fixed lengths, so the length property is read-only,
+// and methods that change the lengt:wqh of the array (such as push(), pop(),
+// unshift(), shift(), and splice()) are not implemented for typed arrays.
+
+// regular expression pattern matching is done by finding
+// the first position in the string at which a match is possible. Since a
+// match is possible starting at the first character of the string, shorter
+// matches starting at subsequent characters are never even considered.

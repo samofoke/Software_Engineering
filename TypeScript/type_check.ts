@@ -25,3 +25,7 @@ let asignSomething = "";
 asignSomething = ":)";
 
 console.log("print: ", asignSomething);
+
+let x: number = 5;
+let y: number = 3;
+console.log(x + y);
