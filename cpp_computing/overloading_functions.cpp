@@ -102,6 +102,7 @@ int main()
  * by argumentsenclosed in parentheses.
  */
 
+/* 
 int main()
 {
     const double cost_per_sqrt = 10.50;
@@ -122,6 +123,131 @@ int main()
     cout <<"The length is: "<< length_side <<"\n"; 
     return(0); 
 }
+*/
+
+// looking at overloading functions 
+/*
+double ave(double n1, double n2);
+
+double ave(double n1, double n2, double n3);
+
+
+double ave(double n1, double n2) {
+    return ((n1 + n2) /2.0);
+}
+
+strings ave(strings n1, strings)
+
+double ave(double n1, double n2, double n3) {
+    return ((n1 + n2 + n3)/3.0);
+}
+
+
+int main() {
+
+    cout << "The average of two numbers: "<< ave(4.5, 5.5) << endl;
+    
+    cout << "The average of three numbers: " << ave(2.0, 2.5, 3.0) << endl;
+    
+    return 0;
+}
+*/
+//An overloading function is a function that that has two definitions ave(1, 2) and ave(1, 2, 3)
+//in this case it is the same function name with two definitions.
+
+
+//looking into a more complex example of overloading
+
+
+double unitPrice(int dimeter, double price);
+
+double unitPrice(int length, int width, double price);
+
+double unitPrice(int dimeter, double price)
+{
+    const double PI = 3.14159;
+    double radius, area;
+
+    radius = dimeter / static_cast<double>(2);
+    area = PI * radius * radius;
+    return (price/area);
+}
+
+double unitPrice(int length, int width, double price)
+{
+    double area = length * width;
+    return (price/area);
+}
+
+int main()
+{
+    int dimeter, length, width;
+    double priceRound, unitPriceRound, priceRentangular, unitPriceRetangular;
+
+    cout << "Welcome to the pizza Consumer Union.\n";
+    cout << "Enter the dimeter in inces: ";
+    cin >> dimeter;
+    cout << "Enter the price of rounded pizza: $";
+    cin >> priceRound;
+    cout << "Enetr the length and width: ";
+    cin >> length >> width;
+    cout << "Enter the prce of rentangular pizza: $";
+    cin >> priceRentangular;
+
+    unitPriceRetangular = unitPrice(length, width, priceRentangular);
+    unitPriceRound = unitPrice(dimeter, priceRound);
+
+    cout.setf(ios::fixed);
+    cout.setf(ios::showpoint);
+    cout.precision(2);
+    cout << endl << "round pizza: dimeter = " << dimeter << "inches\n";
+    cout << "per sqaure inch = $" << unitPriceRound <<endl;
+    cout << "Rentangular pizza: length = " << length << " inches\n";
+    cout << "width: " << width << " inches\n" << "Price: " << priceRentangular << "per square inch: " << unitPriceRetangular <<endl;
+
+    if (unitPriceRound < unitPriceRetangular)
+    {
+        cout << "The round one is  the better buy.\n";
+    } else {
+        cout << "The rentangular one is better buy.\n";
+    }
+
+    cout << "Enjoy your meal.....";
+    return (0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
