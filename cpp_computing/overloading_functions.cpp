@@ -158,7 +158,7 @@ int main() {
 
 //looking into a more complex example of overloading
 
-
+/*
 double unitPrice(int dimeter, double price);
 
 double unitPrice(int length, int width, double price);
@@ -172,7 +172,7 @@ double unitPrice(int dimeter, double price)
     area = PI * radius * radius;
     return (price/area);
 }
-
+*/
 double unitPrice(int length, int width, double price)
 {
     double area = length * width;
