@@ -21,14 +21,12 @@ interface IntegerEuclidProps {
 
 //This is the first approach to the solution
 const euclidAlgorithm1 = ({ m, n }: IntegerEuclidProps): number => {
-  let temp: number;
-
-  if (n !== 0) {
-    temp = m % n;
+  for (; n !== 0; ) {
+    const temp = m % n;
     m = n;
     n = temp;
   }
   return m;
 };
 
-console.log(euclidAlgorithm1({ m: 20, n: 2 }));
+console.log(euclidAlgorithm1({ m: 200, n: 87 }));

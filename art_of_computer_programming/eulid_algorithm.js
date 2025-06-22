@@ -16,12 +16,11 @@
 //This is the first approach to the solution
 var euclidAlgorithm1 = function (_a) {
     var m = _a.m, n = _a.n;
-    var temp;
-    if (n !== 0) {
-        temp = m % n;
+    for (; n !== 0;) {
+        var temp = m % n;
         m = n;
         n = temp;
     }
     return m;
 };
-console.log(euclidAlgorithm1({ m: 20, n: 2 }));
+console.log(euclidAlgorithm1({ m: 200, n: 87 }));
