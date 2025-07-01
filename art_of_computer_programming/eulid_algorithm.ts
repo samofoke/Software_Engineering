@@ -30,3 +30,11 @@ const euclidAlgorithm1 = ({ m, n }: IntegerEuclidProps): number => {
 };
 
 console.log(euclidAlgorithm1({ m: 200, n: 87 }));
+
+/*
+ * We have the arrow <- which called assignment or substitution
+ * meaning m <- n this is means the value of m will be replaced by the value
+ * of n, the "=" will donate the condtion that can be tested.
+ *
+ *
+ */
