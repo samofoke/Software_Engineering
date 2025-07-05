@@ -33,8 +33,9 @@ console.log(euclidAlgorithm1({ m: 200, n: 87 }));
 
 /*
  * We have the arrow <- which called assignment or substitution, stands for
- * a sign that donates an action meaning m <- n this is means the value
- * of m will be replaced by the value of n, the "=" will donate the
- * condtion that can be tested.
- *
+ * a sign that donates an action that can be performed, meaning m <- n
+ * this is means the value of m will be replaced by the value of n,
+ * the "=" will donate the condtion that can be tested, the sudo code
+ * in this book allows us to have a clear guide how things are setup.
+ * also, indexing items of an ordered array.
  */
